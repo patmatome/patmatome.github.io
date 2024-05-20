@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="calculator.css">
+    <title>Document</title>
+</head>
+<body style="background-color: brown;">
+
+    <div id="calculator">
+        <input id="display" >
+        <div id="keys">
+            <button onclick="appendToDisplay('+')" class="operator-btn">+</button>
+            <button onclick="appendToDisplay('7')">7</button>
+            <button onclick="appendToDisplay('8')">8</button>
+            <button onclick="appendToDisplay('9')">9</button>
+            <button onclick="appendToDisplay('-')" class="operator-btn">-</button>
+            <button onclick="appendToDisplay('4')">4</button>
+            <button onclick="appendToDisplay('5')">5</button>
+            <button onclick="appendToDisplay('6')">6</button>
+            <button onclick="appendToDisplay('*')" class="operator-btn">x</button>
+            <button onclick="appendToDisplay('1')">1</button>
+            <button onclick="appendToDisplay('2')">2</button>
+            <button onclick="appendToDisplay('3')">3</button>
+            <button onclick="appendToDisplay('/')" class="operator-btn">/</button>
+            <button onclick="appendToDisplay('0')">0</button>
+            <button onclick="appendToDisplay('.')">.</button>
+            <button onclick="calculate()">=</button>
+            
+            
+        </div>
+        <div class="op">
+            <button onclick="clearDisplay()" id="clear">C</button>
+            <button onclick="appendOparator('exp')">x&#x000b2</button>
+            <button onclick="appendOparator('sin')">sin</button>
+            <button onclick="appendOparator('cos')">cos</button>
+            <button onclick="appendOparator('tan')">tan</button>
+            <button onclick="appendOparator('pi')">pi</button>
+            <button onclick="appendOparator('log')">log</button>
+
+        </div>
+    </div>
+    <div class="quadratic">
+        <p id="qtex" style="font-style: italic; font-weight: bold; ">Solve : ax&#x00b2 + bx + c = 0</p>
+        <label for="a">Enter a:</label><input type="text" id="a">
+        <label for="b">Enter b: </label><input type="text" name="b" id="b">
+        <label for="c">Enter c: </label><input type="text" name="c" id="c">
+        <div class="answerArea">
+         <textarea readonly name="answer" id="answer" cols="13" rows="3"></textarea>
+            <button id="solvex"  onclick="DisplayxValues()">Get X</button>
+        </div>
+    </div>
+    <script src="basicCulculator.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,100 @@
+body{
+    margin: 0px;
+    display: grid;
+    justify-content: center;
+    height: 100vh;
+    color: white;
+
+}
+#calculator{
+    display: block;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(44, 43, 43);
+    border-radius: 10px;
+    font-size: 50px;
+    width: 319px;
+    height: fit-content;
+    overflow-x: hidden;
+}
+#display{
+    width:100%;
+    padding: 20px;
+    text-align: left;
+    background-color: rgb(78, 75, 75);
+    color: white;
+}
+#keys{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:10px;
+    padding: 25px;
+}
+button{
+    color: white;
+
+    width: 20%px;
+    height:30px;
+    border-radius: 10px;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+}
+button:hover{
+    background-color: rgb(85, 79, 79);
+
+}
+.operator-btn{
+    background-color: orange;
+}
+.operator-btn:hover{
+    background-color: rgb(167, 114, 17);
+
+}
+.op{
+    position: relative;
+    bottom: 40px;
+    left: 27px;
+    gap: 7px;
+    display:inline-flex;
+
+}
+.op button{
+    background-color:tomato;
+
+}
+.op button:hover{
+    background-color:rgb(214, 48, 19);
+    cursor: pointer;
+}
+#clear{
+    background-color:rgb(24, 197, 99);
+    width: 60px;
+}
+#clear:hover{
+    background-color:rgb(140, 228, 178);
+    cursor: pointer;
+}
+.quadratic{
+    background-color: rgb(122, 55, 69);
+    padding: 10px;
+    justify-content: center;
+    height: fit-content;
+    box-shadow: 2px 1px 3px 2px burlywood ;
+    border-radius: 2px;
+    
+}
+.quadratic input{
+    width: 20px;
+}
+
+.quadratic textarea{
+    margin-top: 10px;
+    width: 100%;
+    resize: none;
+}
+.quadratic button{
+    justify-self: center;
+    margin: 10px 40% auto;
+    width: 50px;
+}
+

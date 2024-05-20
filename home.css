@@ -1,0 +1,419 @@
+
+*{
+    margin:0px;
+    text-decoration: none;
+    color: white;
+}
+body{
+	background-color:rgb(20, 22, 24);
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 1px;
+}
+header{
+    position: sticky;
+    width: 100%;
+    top: 0px;
+    z-index: 10000;
+}
+
+    .navbar{
+        background-color: rgb(56, 33, 56);
+        display: flex;
+        align-items: center;
+        width: 100%;
+        font-family:monospace;
+        min-height: 50px;
+        gap: 70px;
+        box-shadow: 0px 0px 6px 3px black
+        
+    }
+    
+    
+    .logo{
+        font-size: 40px;
+        font-weight: bolder;
+        margin-left:10px ;
+    }
+    .navbar.navbar>ul>li{
+        list-style-type: none;
+        display: inline-flex;
+        font-size: 20px;
+        color: white;
+       
+    }
+    .navbar>ul{
+        display: inline-flex;
+        justify-content: space-evenly;
+        width: inherit; 
+    }
+    li a{
+        display: inline-flex;
+        color: aliceblue;
+        letter-spacing: 3px;  
+    }
+    li a:hover, .active{
+        box-shadow: 0px 0px 3px 3px rgb(69, 69, 151);
+        background-color: rgb(42, 42, 189);
+    }
+    #check{
+        display: none;
+       
+    }
+        /*
+            STYLING THE MAIN OF THE HOMEPAGE
+            AND ITS CONTENTS
+        */
+  main{width: 100%;
+    display: grid;
+
+}
+    .prflImgContainer{
+        margin-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        
+    }
+    .prflPic{
+        display: flex;
+        background-image: url("C:/Users/Maela/Desktop/Computer Science/Projects/projectProfile/images/profilePic.jpg");
+        width:190px;
+        height: 225px;
+        background-position: center;
+        background-size:contain;
+        background-repeat: no-repeat;
+        box-shadow: 0px 0px 3px 3px rgb(56, 33, 56);
+        background-clip: border-boxq;
+        border-radius: 50%;
+        animation: floating 4s ease-in-out infinite;
+        z-index: 0;
+    }
+    @keyframes floating {
+        0%{
+            transform: translateY(0);
+        }
+        50%{
+            transform: translateY(-7%);
+            
+        }
+        100%{
+            transform: translateY(0);
+
+        }
+        
+    }
+   
+    .welcome{
+        width: 100%;
+        text-align: center;
+        font-size: 30px;
+        padding-top: 15px;
+        padding-bottom:5px ;
+    }
+    .lnk-wtsp-icons{
+        display: flex;
+        border-radius: 50%;
+        justify-content: center;
+        gap: 20px;
+        padding-top: 5px;
+        padding-bottom: 5px;        
+
+    }
+    .lnk-wtsp-icons img{
+        width: 25px;
+        height: 25px;
+        border-radius: 50%;
+        border: 2px solid rgb(36, 87, 107);
+        cursor: pointer;
+    }
+    .lnk-wtsp-icons img:hover{
+        transition: all linear;
+        margin-top: -3px;
+        box-shadow: 0px 0px 3px 3px rgb(28, 139, 184);
+        border: 2px solid rgb(28, 139, 184);
+
+    }
+    .HomeContent{
+        
+        text-align: center;
+        max-width: 80%;
+        margin-left: 20%;
+        margin-right:20% ;
+        font-weight: lighter;
+    }
+    .HomeContent button{
+        height: 50px;
+        width: 110px;
+        margin-top:15px;
+        font-weight: bold;
+        background-color: crimson;
+        border:2px solid white;
+        border-radius: 50px;
+        cursor: pointer;
+    }
+    .HomeContent button:hover{
+        transition: all 1s;
+        background-color: white;
+        border:2px solid crimson;
+        color: crimson;
+        box-shadow: 0px 0px 3px 3px crimson;
+    }
+    .about-me{
+        width: 100%;
+        padding-top: 10px;   
+        padding-bottom: 20px;   
+    }
+    webStack{
+        display: grid;
+       
+    }
+
+.about-me-detail{
+    display: grid;
+    grid-template-columns: 15% auto;
+    background-color:rgb(36, 87, 107);
+    padding: 7px;
+    width: 80%;
+    margin-left: 10%;
+    font-style: italic;
+}
+.computing-icon{
+    background-attachment: inherit;
+}
+.project-fx{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-left: 10%;
+    
+}
+.home-project-container{
+    border-radius: 5px ;
+    border: solid 2px rgb(63, 61, 61);
+    height: fit-content;
+    padding: 2px;
+    background-color:rgb(49, 68, 75);
+    cursor: pointer; 
+}
+.project-fx img{
+    border-radius: 5px 5px 0px 0px;
+    width: 30vw;
+
+
+}
+.project-title p{
+    border: solid 1px rgb(63, 61, 61);
+    text-align: center;
+   
+}
+.fx-discription{
+    padding-left:50px; 
+    text-align: start;
+    width: 80%;
+}
+.home-project-container:hover{
+    filter:brightness(1.1);
+    text-decoration: underline;
+    box-shadow: 0px 0px 3px 3px skyblue;
+}
+   
+    /*
+            STYLING THE FOOTER SECTION OF EVERY PAGE CONTAINING
+            SOCIAL MEADIA CONTACTS AND COPYRIGHTS
+    */
+    footer{
+        display:grid;
+        background-color:#010101;
+        justify-content:center;
+        align-items:center;
+        padding-top:16px;
+        width: 100%;
+    }
+    .ftrContainer{
+        display:flex;
+        justify-content: center;
+        gap: 20px;
+    }
+    
+    .ftrContainer img{
+        height: 20px;
+        width: 20px;
+        cursor: pointer;
+        border: solid 2px crimson;
+        border-radius: 50px;
+        padding: 5px;
+    }
+    .ftrContainer img:hover{
+        border-radius: 50px;
+        padding: 5px;
+        box-shadow: 0px 0px 3px 3px crimson;
+
+    }
+    footer p{
+        text-align: center;
+        padding: 10px;
+    }
+    @media(max-width:500px) {
+       
+        *{
+            margin:0px;
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+        }
+        .project-fx{
+            display: grid;
+            grid-template-columns: auto auto;
+            margin-left: 0;
+            
+        }
+        .ftrContainer img{
+            height: 6vw;
+            width: 6vw;
+            cursor: pointer;
+            border: solid 2px crimson;
+            border-radius: 50px;
+            padding: 5px;
+        }
+    }
+    /*USING MEDIA QUERY TO MAKE THE MY WEB ADAPT/RESIZE WHEN OPENED
+    ON DEVICE WITH <630PX OF WIDTH*/
+    
+    @media(max-width:834px) {
+       
+        *{
+            margin:0px;
+            text-decoration: none;
+            color: white;
+        }
+        header{
+         background-color: rgb(56, 33, 56);
+ 
+        }
+         
+         .navbar{
+             display: flex;
+             align-items: center;
+             width: 100%;
+             font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+             min-height: 50px;
+             gap: 0px;
+             
+         }
+         
+         .navbar.navbar>ul{
+             position: absolute;
+             margin-top:66vh;
+             left: 150%;
+             background-color: rgb(56, 33, 56);
+             align-items: center;
+             box-shadow: 3px 5px 6px #070707;
+             width: 100%;
+             height: 60vh;
+             display: none;
+             padding: 0px;
+             z-index: 900000;
+             
+ 
+         }
+         .navbar.navbar>ul>li{
+            
+             font-size:150%;
+         }
+         li a{
+            color:rgb(15, 241, 241);
+         }
+         
+ 
+         li a:active,li a:hover{
+             background: rgb(69, 69, 151);
+             transition: 5s;
+         }
+         .project-fx img{
+            border-radius: 5px 5px 0px 0px;
+            max-width: 100%;
+        
+        }
+        .fx-discription, .about-me-detail, .webStack{
+            padding-left: 5%;
+            width:auto;
+            margin-left: 0%;
+        }
+        .home-project-container{
+            border-radius: 5px ;
+            border: solid 2px rgb(63, 61, 61);
+            height: fit-content;
+            padding: 2px;
+            
+        }
+        .project-fx img{
+            border-radius: 5px 5px 0px 0px;
+            width: 100%;
+        
+        
+        }
+          /*  ACTION ON WHAT TO DO WHEN THE CHECK BOX 
+         IS CHECK USE THE LABEL CLASS FOR IT SO
+         USER CAN CLICK ON IT INTEAD OF DIRECT CHECK
+         ON THE CHECKBOX*/
+ 
+         .toggle{
+             position: absolute;
+             background-color: inherit;
+             height: 30px;
+             width: 30px;
+             z-index:1;
+             padding-top: 8.5px;
+             right: 2%;
+             top:20%;
+             border-radius: 5px;
+             
+         }
+         .toggle .line{
+             position: absolute;
+             margin-left: 5px;
+             height: 3px;
+             width: 20px;
+             background-color: white;
+ 
+         }
+         .midLine{
+             margin-top: 10px;
+ 
+         }
+         .btmLine{
+             margin-top: 20px;
+ 
+         }
+        
+ 
+          #check:checked ~label>.btmLine{
+             margin-left: 2px;
+             width: 25px;
+             margin-top: 10px;
+             transform:rotate(-45deg) ;
+         }
+         #check:checked ~label>.midLine{
+             display: none;
+         }
+ 
+         #check:checked ~label>.topLine{
+             margin-left: 2px;
+             width: 25px;
+             margin-top: 9px;
+             transform:rotate(45deg) ;
+             
+         }
+         #check:checked ~ nav>ul{
+             left: 0px;
+             display:grid;
+
+         }
+         #check:checked~.toggle{
+             background-color: red;
+             
+         }
+ 
+     }
+ 
+ 
+ 

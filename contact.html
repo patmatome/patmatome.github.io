@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\css\home.css">
+    <link rel="stylesheet" href="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\css\contact.css">
+    <title>Contact</title>
+</head>
+<body>
+    <header>
+        
+        <input type="checkbox" id="check">
+        <label for="check" class="toggle">
+            <span class="topLine line"></span>
+            <span class="midLine line "></span>
+            <span class="btmLine line"></span>
+
+        </label>
+        <nav class="navbar">
+            <div class="logo">
+                MaelaPat
+            </div>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="about.html">ABOUT</a></li>
+                <li><a href="contact.html" class="active">CONTACT</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="services.html">SERVICES</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+    <main>
+        <div class="ContactMe">
+            <p>Contact me through any of the listed contacts </p>
+        </div>
+        <div class="contactOptions">
+            
+            <table>
+                <tr>
+                    <th>
+                        Means of Contact
+                    </th>
+                    <th>
+                        Contact Details
+                    </th>
+                </tr>
+                <tr>
+                    <td>
+                        Call/WhatsAppp
+                    </td>
+                    <td>
+                        (+27)72 599 0264
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Email Address
+                    </td>
+                    <td>
+                        <a href="">patmatome@mail.com</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Postal/Home Address
+                    </td>
+                    <td>
+                        South Africa, Limpopo, Polokwane, bochum, Taaibosch,block E,
+                     Stand Number 1082 <br>Box 91,Raditshaba 0718,
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Current Address
+                    </td>
+                    <td>
+                        Gauteng, Ekhuruleni, Vosloorus,
+                         Bramble street, House Number 723, Postal Code: 5943
+                    </td>
+                </tr>
+                 
+            </table>
+            <p id="to-user-input">Use the below messege box. Please enter require information below 
+                for response 
+            </p>
+            
+        </div>
+        <!--CONTACT FORM TO SEND EMAIL-->
+        <form id="form">
+       <div class="userDetails">
+            <div class="userInput">
+            
+                <div class="uName">	
+                    <label for="name">Enter Name :</label><input id="name" required type="text" placeholder="myname"/> 
+                </div>
+                <div class="uEmail">
+                    <label for="user-email">Enter Email :</label><input id="user-email" required type="email" placeholder="myemail@gmai.com"/>  
+                </div>
+                <div class="uMessege">
+                    <textarea name="" id="enqueryMessege" cols="30" rows="10"></textarea>
+                </div>
+                <div class="submitBtn">
+                    <button id="send" onclick="sendEmail()" ><a href="">SEND</a></button>
+                </div>
+                
+            </div>
+        </div>
+    </form>
+    </main>
+    <footer>
+        <div class="ftrContainer">
+            <img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\lnk.jpg" >
+				<img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\x.jpg">
+				<img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\fb.jpg" >
+				<img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\whatsapp.jpg" >
+				<img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\ins.jpg" >
+        </div>
+        <p>
+            &copy Rights reserved by Maela Matome Pat
+        </p>
+    </footer>
+    <script src="C:\Users\Maela\Desktop\Computer Science\projectProfile\html\drift.js"></script>
+</body>
+</html>

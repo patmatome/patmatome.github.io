@@ -1,0 +1,45 @@
+body{
+}
+.container{
+    display:grid;
+    justify-content: center;
+    grid-template-columns:auto auto;
+    justify-content: space-evenly;
+    font-size: unset;
+    font-weight:normal;
+    margin-top: 10%;
+    row-gap:30px
+}
+.project{
+    display:grid;
+    border: solid 1px black;
+    width: 40vw;
+    cursor: pointer;
+    box-shadow: 0px 0px 3px 2px black;
+    border-radius: 3px;
+    
+
+}
+.project-title{
+    border: solid 1px grey;
+    text-align: center;
+    margin-top: 10px;
+    border-radius: 3px;
+
+}
+.project>img{
+    width: 38vw;
+    height: 28vh;
+    margin: auto;
+    margin-top: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 2px 2px grey;
+
+
+}
+.project:hover{
+    transition: all 500ms ease-in-out;
+    text-decoration: underline;
+    box-shadow: 0px 0px 10px 4px black;
+
+}
