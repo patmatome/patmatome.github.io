@@ -77,8 +77,9 @@ th{
 }
 @media(max-width:324px){
        table{
-              margin-left:0px;
-              border: none;
+              margin-left:0%;
+              border: solid 0px navy;
+              width:100%;
               text-align:start;
        }
        th, td{
@@ -86,6 +87,14 @@ th{
               padding-left:0;
        }
        .userDetails{
+              border:none;
+              padding-left:0;
+       }
+       td a{
+              border-radius:5px;
+       }
+       .userdetails{
+              margin-top:5px;
               display:flex;
               padding:0;
        }
