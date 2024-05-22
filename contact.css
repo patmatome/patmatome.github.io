@@ -76,3 +76,41 @@ th{
        color: wheat;
        transition: 0s;
 }
+@media(max-width:324px){
+       table{
+              margin-left:0px;
+              border: none;
+              text-align:start;
+       }
+       th, td{
+              border:none;
+              padding-left:0;
+       }
+       .userDetails{
+              display:flex;
+              padding:0;
+       }
+       .uName, uEmail, uMessege{
+              display: flex;
+              justify-content:start;
+              padding:10px 0 10px 0;
+              width:auto;
+              resize:inherit;
+       }
+       .userInput{
+              padding-left:0;
+              width:99vw;
+       }
+       input{
+              width:50%;
+       }
+       textarea{
+              width:90%;
+       }
+       
+}
+@media(max-width:216px){
+       *{
+              font-size:small;
+       }
+}
