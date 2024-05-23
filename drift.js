@@ -27,7 +27,7 @@ function sendEmail(){
             userMsg.style="color:green; font-style:italic;"     
             var name = userNameInput.value
             userMsg.innerHTML="THANK YOU "+name.toUpperCase()+", YOU'R MESSEGE HAS BEEN SUCCCEFULLY SENT I'LL BE IN TOUCH..."  
-            emails.send();
+            emails.send("service_vtzxchl", "template_qlxz9e4");
         }
         
     } catch (error) {
