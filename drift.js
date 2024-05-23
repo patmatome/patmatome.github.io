@@ -2,9 +2,7 @@
 /** importing html elements to my javascript txt file for functionality and
  * modification
 */
-var userNameInput =document.getElementById('name')
-var userEmailInput = document.getElementById('user-email')
-var userMsg = document.getElementById('to-user-input');
+var userMsg =;
 var form = document.getElementById('form');
 var message = document.getElementById('enqueryMessege').value;
 
@@ -13,36 +11,19 @@ form.addEventListener("submit",(event) =>{
     event.preventDefault()
 });
 function sendEmail(){
-    try {
-        if(userNameInput.value==""||userEmailInput.value==""||userNameInput.value==null){
 
-            userMsg.style="color:red; font-style:italic;"        
-            userMsg.innerHTML = "PLEASE ENTER ALL REQUIRED DETAILS!!!"
-        }
-        else if(message.value.length<=3){
-            userMsg.style="color:yellow; font-style:italic;"     
-            var name = userNameInput.value
-            userMsg.innerHTML=name.toUpperCase()+" your message must have atleast two word!!"  
-            }
-        else{
-            
-            userMsg.style="color:green; font-style:italic;"     
-            var name = userNameInput.value
-            userMsg.innerHTML="THANK YOU "+name.toUpperCase()+", YOU'R MESSEGE HAS BEEN SUCCCEFULLY SENT I'LL BE IN TOUCH..."  
+           
            let params={
-                name,
-                email,
-               subject="hello",
-                message
+                name = document.getElementById('name').value,
+                email=document.getElementById('user-email').value,
+                message =  document.getElementById('to-user-input').value
             }
-            emailjs.send("service_vtzxchl", "template_qlxz9e4", params);
-        }
-        
-    } catch (error) {
-        error= userMsg.innerText= "Please Enter all required Inputs"
-        
-    }
-    
+            emailjs.send("service_vtzxchl", "template_qlxz9e4", params).then((response)=> {
+      console.log('SUCCESS!');
+    }, function(error) {
+      console.log('FAILED...', error);
+    });
+     
 
 }
    
