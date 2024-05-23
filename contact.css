@@ -48,6 +48,7 @@ th{
        background-color:rgba(122, 115, 168, 0.158);
        box-shadow:0px 0px 3px 3px #010101;
        border-radius:5px; ;
+       width:200px;
 
 }
 .uName, .uEmail, .uMessege{
@@ -69,6 +70,7 @@ th{
        width: 80px;
        height: 40px;
        border-radius: 20px;
+       backgroud-color:crimson;
 
 }
 .submitBtn>button:hover, button a:hover{
@@ -76,7 +78,7 @@ th{
        color: wheat;
        transition: 0s;
 }
- input{
+ input{ 
               background-color:white;
 
        } 
