@@ -129,6 +129,7 @@ th{
 
        } 
        textarea{
+              height:100px;
               width: 98%;
               background-color:white;
               
