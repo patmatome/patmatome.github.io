@@ -1,3 +1,4 @@
+
 /** importing html elements to my javascript txt file for functionality and
  * modification
 */
@@ -5,7 +6,7 @@ var userNameInput =document.getElementById('name')
 var userEmailInput = document.getElementById('user-email')
 var userMsg = document.getElementById('to-user-input');
 var form = document.getElementById('form');
-var message = document.getElementById('enqueryMessege');
+var message = document.getElementById('enqueryMessege').value;
 
 /* taking user input*/
 form.addEventListener("submit",(event) =>{
@@ -34,7 +35,7 @@ function sendEmail(){
                subject="hello",
                 message
             }
-            emails.send("service_vtzxchl", "template_qlxz9e4", params);
+            emailjs.send("service_vtzxchl", "template_qlxz9e4", params);
         }
         
     } catch (error) {
