@@ -24,14 +24,16 @@ function sendEmail(){
             userMsg.innerHTML=name.toUpperCase()+" your message must have atleast two word!!"  
             }
         else{
-            let params={
-                name,
-                email,
-                message
-            }
+            
             userMsg.style="color:green; font-style:italic;"     
             var name = userNameInput.value
             userMsg.innerHTML="THANK YOU "+name.toUpperCase()+", YOU'R MESSEGE HAS BEEN SUCCCEFULLY SENT I'LL BE IN TOUCH..."  
+           let params={
+                name,
+                email,
+               subject="hello",
+                message
+            }
             emails.send("service_vtzxchl", "template_qlxz9e4", params);
         }
         
