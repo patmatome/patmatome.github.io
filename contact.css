@@ -115,15 +115,19 @@ th{
 
        }
        .userInput{
-              margin-left: 0;
-              padding-left: 0;
+              margin-left: 0px;
+              padding-left: 0px;
               width: 97vw;
        }
        input{
               width: 50%;
+              background-color:white;
+
        } 
        textarea{
               width: 90%;
+              background-color:white;
+
        }
 }
 @media(max-width:216px)  {
