@@ -76,6 +76,10 @@ th{
        color: wheat;
        transition: 0s;
 }
+ input{
+              background-color:white;
+
+       } 
 @media(max-width:324px)  {
       
        table{
@@ -125,8 +129,9 @@ th{
 
        } 
        textarea{
-              width: 90%;
+              width: 98%;
               background-color:white;
+              
 
        }
 }
