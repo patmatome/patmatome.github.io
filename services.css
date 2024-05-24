@@ -17,6 +17,8 @@
     box-shadow: 0px 0px 3px 3px white;
 
 }
-@media(max-width:500px){
-    
+@media(min-width:500px){
+    .computerRepair img{
+    width:350px;
+}
 }
