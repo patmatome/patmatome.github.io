@@ -1,3 +1,20 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .ContactMe{
        width: 100%;
        text-align: center;
@@ -126,9 +143,10 @@ th{
 
        }
        .userInput{
+              position:relative;
               margin-left: 0px;
               padding-left: 0px;
-              width: 95vw;
+              width: 100vw;
        }
        input{
               width: 98%;
