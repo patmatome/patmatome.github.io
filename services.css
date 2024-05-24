@@ -1,19 +1,22 @@
 .services-conitainer-section{
     display: grid;
     padding-top: 3%;
-    grid-template-columns: auto auto auto;
-    justify-content: space-evenly;
+    grid-template-columns: auto;
+    justify-content: center;
 }
 .serv{
-    width: 25vw;
-    height: 20vw;
     margin-top: 3vh;
     border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
 }
+.service-img img{
+    width:98vw;
+}
 .serv:hover{
-    margin-top: 2vh;
     box-shadow: 0px 0px 3px 3px white;
 
+}
+@media(max-width:500px){
+    
 }
