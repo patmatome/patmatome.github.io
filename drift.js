@@ -13,7 +13,7 @@ function sendEmail(){
            
             emailjs.send("service_vtzxchl", "template_qlxz9e4", params).then((response)=> {
       console.log('SUCCESS!');
-       alert("THANK YOU "+name.toUpperCase()+", YOU'R MESSEGE HAS BEEN SUCCCEFULLY SENT I'LL BE IN TOUCH..." )               
+       alert("THANK YOU "+params.name.toUpperCase()+", YOU'R MESSEGE HAS BEEN SUCCCEFULLY SENT I'LL BE IN TOUCH..." )               
     }, function(error) {
       console.log('FAILED...', error);
     });
