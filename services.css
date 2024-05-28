@@ -1,3 +1,5 @@
+
+
 .services-conitainer-section{
     display: grid;
     padding-top: 3%;
@@ -9,6 +11,7 @@
     border: 2px solid white;
     border-radius: 5px;
     cursor: pointer;
+    font-size:15px;
 }
 .service-img img{
     width:98vw;
