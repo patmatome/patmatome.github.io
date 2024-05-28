@@ -63,9 +63,10 @@ header{
             STYLING THE MAIN OF THE HOMEPAGE
             AND ITS CONTENTS
         */
-  main{width: 100%;
+  main{
+	  width: 100%;
     display: grid; 
-
+ justify-conyent:center;
 }
     .prflImgContainer{
         margin-top: 8%;
