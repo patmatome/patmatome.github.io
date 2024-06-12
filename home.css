@@ -80,7 +80,7 @@ header{
     .prflPic{
         display: flex;
         background-image: url("/profilePic.jpg");
-        width:192px;
+        width:150px;
         height: 230px;
         background-position: center;
         background-size:contain;
