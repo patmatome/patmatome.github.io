@@ -5,7 +5,8 @@
     color: white;
 }
 body{
-	background-color:rgb(20, 22, 24);
+background-image: linear-gradient(to bottom right, red , blue);
+background-color:rgb(20, 22, 24);
     font-family:Arial, Helvetica, sans-serif;
     padding: 1px;
 }
@@ -80,7 +81,7 @@ header{
         display: flex;
         background-image: url("/profilePic.jpg");
         width:192px;
-        height: 200px;
+        height: 230px;
         background-position: center;
         background-size:contain;
         background-repeat: no-repeat;
