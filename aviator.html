@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>aviator</title>
+    <link rel="stylesheet" href="C:\Users\Maela\Desktop\Computer Science\Projects\aviator\avioato.css">
+    <script defer src="C:\Users\Maela\Desktop\Computer Science\Projects\aviator\let x=0;.js"></script>
+</head>
+<body>
+    <header>
+        <div class="logo"><h2>Aviator!!</h2></div>
+        <nav>
+
+            <div class="balance">
+                <p id="balance-value" style="color: green; font-weight: bold;">1444.00</p><p> ZAR</p>
+            </div>
+            <div class="manu"></div>
+        </nav>
+       
+    </header>
+    <main>
+        <div class="history"></div>
+        <div class="avi-container">
+            <div class="avi-jet" id="jet">
+                
+            </div>
+            <div class="zone">
+                <p id="zone-value" style="text-align: center;">
+                    
+                </p>
+            </div>
+
+        </div>
+            <section class="section">
+                <input type="checkbox" id="check1" class="check">
+                <div class="bet-option">
+                    <div class="m-bet">
+                        <label for="check1" class="manual-bet">Bet</label>
+                    </div>
+                    <div class="auto">
+                        <label for="check1" id="auto">Auto</label>
+                    </div>
+                </div>
+
+            <div class="first bet">
+                <div class="bet-amount">
+                    <input type="number" min="0" id="bet-amount-1">
+                    <div class="btn-amount">
+                        <button onclick="addAmout(10)">10</button>
+                        <button onclick="addAmout(20)">20</button>
+                        <button onclick="addAmout(50)">50</button>
+                        <button onclick="addAmout(100)">100</button>
+                </div>
+                </div>
+                <button id="btn-bet1" class="bet-button">BET</button>
+            </div>
+        </section>
+        <section class="section1">
+            <input type="checkbox" id="check2" class="check">
+                <div class="bet-option">
+                    <div class="m-bet">
+                        <label for="check2" class="manual-bet">Bet</label>
+                    </div>
+                    <div class="auto">
+                        <label for="check2" id="auto">Auto</label>
+                    </div>
+                </div>
+            
+            <div class="second bet">
+                <div class="bet-amount">
+                    <input type="number" min="1" id="bet-amount-2">
+                <div class="btn-amount">
+                        <button onclick="addAmout2(10)">10</button>
+                        <button onclick="addAmout2(20)">20</button>
+                        <button onclick="addAmout2(50)">50</button>
+                        <button onclick="addAmout2(100)">100</button>
+                </div>
+                    
+                </div>
+                <button class="bet-button" id="btn2">BET</button>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <p style="font-style: italic;">
+            Message from Developer: Auto-Play & Auto-Cashout gase di fele so in the meantime use manual bet 
+            " DANKO!! " is thank you.
+            
+            Happy Bets:
+            Maela MP
+        </p>
+    </footer>
+   
+
+</body>
+</html>
+
