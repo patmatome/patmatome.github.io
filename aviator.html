@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/avioato.css">
     <script defer src="/let_x=0;.js"></script>
 </head>
-<body>
+    <body>
     <header>
         <div class="logo"><h2>Aviator!!</h2></div>
         <nav>
@@ -45,7 +45,7 @@
 
             <div class="first bet">
                 <div class="bet-amount">
-                    <input type="number" min="0" id="bet-amount-1">
+                    <input type="number" min="1" id="bet-amount-1">
                     <div class="btn-amount">
                         <button onclick="addAmout(10)">10</button>
                         <button onclick="addAmout(20)">20</button>
@@ -54,6 +54,26 @@
                 </div>
                 </div>
                 <button id="btn-bet1" class="bet-button">BET</button>
+            </div>
+            
+            <div class="autoAll">
+                <div class="autoB">
+                    <input type="checkbox" id="autoBet">
+                    <label class="lbl-auto" for="autoBet">Auto Bet
+                        <div class="toggleAuto" for="autoBet">
+                            <div class="dot"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="autoC">
+                    <input type="checkbox" id="autoCashout">
+                    <label class="lbl-cashout" for="autoCashout">Auto Cash Out
+                        <div class="toggleCash" >
+                            <div class="dotCash"></div>
+                        </div>
+                    </label>
+                </div>
             </div>
         </section>
         <section class="section1">
@@ -80,10 +100,30 @@
                 </div>
                 <button class="bet-button" id="btn2">BET</button>
             </div>
+            
+            <div class="autoAll2">
+                <div class="autoB">
+                    <input type="checkbox" id="autoBet2">
+                    <label class="lbl-auto2" for="autoBet2">Auto Bet
+                        <div class="toggleAuto2" for="autoBet">
+                            <div class="dot2"></div>
+                        </div>
+                    </label>
+                </div>
+
+                <div class="autoC">
+                    <input type="checkbox" id="autoCashout2">
+                    <label class="lbl-cashout2" for="autoCashout2">Auto Cash Out
+                        <div class="toggleCash2" >
+                            <div class="dotCash2"></div>
+                        </div>
+                    </label>
+                </div>
+            </div>
         </section>
     </main>
     <footer>
-        <p style="font-style: italic; color: crimson">
+        <p style="font-style: italic;">
             Message from Developer: Auto-Play & Auto-Cashout gase di fele so in the meantime use manual bet 
             " DANKO!! " is thank you.
             
