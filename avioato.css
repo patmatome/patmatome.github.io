@@ -1,5 +1,6 @@
 *{
     padding: 0;
+    z-index: 2;
 
 }
 
@@ -36,9 +37,53 @@ header{
 }
 .avi-container{
     display: grid;
-    height: 70vw;   
+    height: 70vw; 
+    overflow: hidden;  
     background-color: rgba(0, 0, 0, 0.466);
-    align-items:end;
+
+}
+.avi-background{
+    position:relative;
+    width:280vw;
+    height: 280vw;
+    z-index: -5;
+    row-gap: 50px;
+    left:-92vw;
+    margin-top: -142vw;
+    margin-left: -50vw;
+    border-radius: 50%;
+    animation: bk 10s infinite linear;
+    background:repeating-conic-gradient(black 0%,black 2%, rgb(39, 39, 38) 2%,rgb(39, 39, 38) 4%);
+
+}.avi-jet{
+    width: 20%;
+    border-radius: 100px;
+    margin-left: -3%;
+    animation: floating  6s infinite;
+    margin-top: 15%;
+    transform: rotate(8deg);
+
+}
+.zone{
+    position: absolute;
+    height: contain;
+    width:contain;
+    color:white;
+    left: 35vw;
+    font-size: 50px;
+    font-weight: bolder;
+    margin: 20vw auto;
+    text-shadow: skyblue 5px 5px 20px;
+
+}
+.backflag{
+    background-color:rgb(46, 54, 52);
+    width:150vw;
+    height:50px;
+    transform-origin: left;
+    z-index: -1;
+    margin-left: -10%;
+    animation: bk 5s infinite ease-in-out;
 }
 
 .bet{
@@ -56,6 +101,7 @@ header{
     width: fit-content;
     justify-self: center;
     border-radius: 15px;
+
 }
 
 .m-bet, .auto{
@@ -159,25 +205,7 @@ input[type="number"]{
  #check2:checked~.bet-option>.m-bet{
     background-color:unset;
  }
- .avi-jet{
-    height: 10vw;
-    width: 10vw;
-    background-color:red;
-    border-radius: 100px;
-    margin: 15vw;
-    animation: floating  6s infinite;
-
-}
-.zone{
-    position: absolute;
-    height: contain;
-    width:contain;
-    color:white;
-    left: 35vw;
-    animation: floating  6s infinite;
-    font-size: 50px;
-    font-weight: bolder;
-}
+ 
 .autoAll, .autoAll2{
     display: none;
     grid-template-columns: auto auto;
@@ -222,33 +250,123 @@ input[type="number"]{
  }
 #autoCashout:checked~.lbl-cashout .toggleCash .dotCash{
     transform: translate(40px);
-    transition:ease-in-out 1s;
+    transition:ease-in-out 800ms;
 }
 #autoCashout2:checked~.lbl-cashout2 .toggleCash2 .dotCash2{
     transform: translate(40px);
-    transition:ease-in-out 1s;
+    transition:ease-in-out 800ms;
 }
 #check1:checked~.autoAll{
     display: grid;
 }#check2:checked~.autoAll2{
     display: grid;
 }
-/*@keyframes floating{
-    0%{
-        transform: translateY(0);
+@media screen and (min-width:800px) {
+    .m-bet, .auto{
+        width:100px ;text-align: center;
+        border-radius: 15px;
     }
-    25%{
-        transform: translateY(-5px);
+    .avi-container{
+        display: grid;
+        height: 400px;
+        max-width: 99%;
+        overflow-x: hidden;
+        
     }
-    50%{
-        transform: translateY(0);
-    }
-    75%{
-        transform: translateY(-10px);
-    }
-    100%{
-        transform: translateY(-5px);
-    }
+    .avi-jet{
+    width: 20%;
+    border-radius: 100px;
+    margin-left: -2%;
+    animation: floating  6s infinite;
+    margin-top: 5%;
+    transform: rotate(8deg);
     
+    }
+    #sec{
+        display: grid;
+        grid-template-columns: 50% 50%;
+    }
+    .bet-button{
+      
+        max-width: 200%;
+      
+    
+    }
+    .bet-auto{
+        display: grid;
+        grid-template-columns: 50% 50%;
+        width: 30%;
+        border-radius: 15px;
+        
+    }
+    input[type="number"]{
+        width: 80%;
+        color: white;
+        height: 20px;
+    }
+    .btn-amount button{
+        margin-top:10px ;
+        border: none;
+        width: 250%;
+        color: white;
+        background-color: rgb(26, 29, 29);
+        border-radius: 15px;
+       
+    }
+    .btn-amount{
+        display: grid;
+        grid-template-columns: auto auto;
+        width: 100%;
+        padding: 5px;
+        align-items: center;
+    }
+    section{
+        display: grid;
+        margin-top:10px ;
+        border-radius: 15px;
+        width: 99%;
+        justify-content: center;
+        
+    }
+    .bet{
+        display: flex;  
+        align-items: center;
+        padding: 0;
+        min-width: 350px;
+        justify-content: space-between;
+        gap:15%;
+    
+    }
+    .bet-option{
+        height: 25px;
+    }
+    .avi-background{
+        position:relative;
+        display: grid;
+        width:280vw;
+        height: 280vw;
+        z-index: -5;
+        row-gap: 50px;
+        left:-91vw;
+        margin-top: -150vw;
+        margin-left: -50vw;
+        border-radius: 50%;
+        animation: bk 10s infinite linear;
+        background:repeating-conic-gradient(black 0%,black 2%, rgb(39, 39, 38) 2%,rgb(39, 39, 38) 4%);
+    
+    }
+    .zone{
+        position: absolute;
+        height: contain;
+        width:contain;
+        color:white;
+        left: 30vw;
+        font-size: 50px;
+        font-weight: bolder;
+        margin: 5vw auto;
+        text-shadow: skyblue 5px 5px 20px;
+    
+    }
    
-}*/
+}
+
