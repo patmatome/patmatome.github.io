@@ -8,7 +8,7 @@
     <script defer src="/let_x=0;.js"></script>
 </head>
   <body>
-    <div id="C" style="display:none; justify-content:center;  position: absolute;margin-top: 30px; justify-content: center;width: 100vw;" class="toast">
+    <div id="C" style="display:block;visibility: hidden ; justify-content:center;  position: absolute; top: 30px; justify-content: center;width: 100vw; z-index: 1000;" class="toast">
         <div class="casOuta" style="padding-right:2px; margin-left: 20%; text-align: center; display:grid;grid-template-columns: 60% 40%; align-items: center; background-color: rgba(21, 56, 21, 0.479); height: 55px; width:60%; border-radius: 50px; border:2px solid white;">
             <div id="toastLvl" >s</div>
             <div class="cc" style="position: inherit; margin-top: 0px; background-color: rgba(0, 128, 0, 0.822); height: 54px; border-radius: 25px; ">
@@ -16,7 +16,7 @@
             </div>
           </div>
     </div> 
-    <div id="C2" style="display:none; justify-content:center;  position: absolute;margin-top: 20px; justify-content: center;width: 100vw;" class="toast">
+    <div id="C2" style="display:block;visibility: hidden ; justify-content:center;  position: absolute;margin-top: 20px; justify-content: center;width: 100vw; z-index: 1000;" class="toast">
         <div class="casOuta" style="padding-right:2px; margin-left: 20%; text-align: center; display:grid;grid-template-columns: 60% 40%; align-items: center; background-color: rgba(21, 56, 21, 0.479); height: 55px; width:60%; border-radius: 50px; border:2px solid white;">
             <div id="toastlvl2" >
                 
@@ -26,7 +26,7 @@
             </div>
           </div>
     </div>
-    <header>
+    <header style="position: absolute; margin-top:0px;width: 100%; z-index: 20;">
         <div class="logo"><h2>Aviator!!</h2></div>
         <nav>
 
@@ -39,26 +39,50 @@
     </header>
     <main>
         <div class="history"></div>
-        <div class="avi-container">
+        <div class="containerAnime" id="verticalAnimation">
+            <div class="a"style="display:grid; justify-content:center;gap:50px;overflow:hidden;">
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
+                </div>
+            <div class="avi-container">
+                
+
+            <div class="avi-jet" id="jet">
+            <img style="width: 100%; height: 100%;" src="C:\Users\Maela\Desktop\Computer Science\Projects\aviator\large-modern-passenger-airliner-jet.png" alt="">
+                </div>
+                <div class="zone">
+                    <p id="zone-value" style="text-align: center;">
+                        
+                    </p>
+                
+                </div>
+                <div class="avi-background">
+                
+                
+                </div>
             
-
-           <div class="avi-jet" id="jet">
-           <img style="width: 100%; height: 100%;" src="/large-modern-passenger-airliner-jet.png" alt="flamachin">
             </div>
-            <div class="zone">
-                <p id="zone-value" style="text-align: center;">
-                    
-                </p>
-               
-            </div>
-            <div class="avi-background">
-              
-              
-            </div>
-           
+            <div class="bottomdotss" style="height: 30px; width: 100%;background-color: rgb(11, 12, 12);z-index: 100;"></div>
+            <div class="bottomdots" style="display: inline-flex;height: 10px;width: 150vw; align-items: center; column-gap: 10vw; overflow: hidden;">
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
+                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
 
-        </div>
 
+            </div>
+
+    </div>
         <div id="sec">
             <section class="section">
                 <input type="checkbox" id="check1" class="check">
@@ -154,7 +178,7 @@
     </div>
     </main>
     <footer>
-        
+        <button class="ad">Play Sound<audio src="/audio.MP3"></audio></button>
     </footer>
    
 
