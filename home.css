@@ -70,7 +70,7 @@ header{
  justify-conyent:center;
 }
     .prflImgContainer{
-        margin-top: 5%;
+        margin-top: 1%;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -259,7 +259,15 @@ header{
         padding: 10px;
     }
     @media(max-width:500px) {
-       
+       .prflImgContainer{
+        margin-top: 8%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+	width:100%;
+	height:100%;
+        
+    }
         *{
             margin:0px;
             text-decoration: none;
@@ -285,15 +293,7 @@ header{
     ON DEVICE WITH <630PX OF WIDTH*/
     
     @media(max-width:834px) {
-	.prflImgContainer{
-        margin-top: 8%;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-	width:100%;
-	height:100%;
-        
-    }
+	
        
         *{
             margin:0px;
