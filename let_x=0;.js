@@ -15,6 +15,14 @@ let toast2 = document.getElementById('toastCash2')
 let toastlvl = document.getElementById('toastLvl')
 let toastlvl2 = document.getElementById('toastlvl2')
 let C2 = document.getElementById('C2')
+let dots = document.querySelector('.a')
+let btmDots = document.querySelector('.bottomdots')
+let ad = document.querySelector('.ad')
+//C.style="transform:translateY(0%)"
+ad.addEventListener('click',()=> {
+    let au =new Audio("/audio.MP3")
+    au.play()
+})
 console.log(autoCashout2)
 
 /*DEALING WITH THE FINANCECE*/
@@ -58,7 +66,7 @@ function fly() {
         increminateMultiplier() 
         
     genarate()
-    
+        
     //console.log(genarate())
     
     //console.log(animeDuration)
@@ -99,26 +107,42 @@ function increminateMultiplier() {
 
             
         }
+
+        //PLAY ALL ANIMATIONS(THE JET, SIDE & BOTTOM DOTS AND THE BACKGROUND)
         backgroundAnimation.play()
+        anaimatingSide.play()
+        btmDotsAnime.play() 
+        jetFly.play()
+
+       if(sec>=5) {
+            jet2.play()
+            jetFly.pause()
+       }
+
         var targetzone = parseFloat(1+animeDuration/1000)
         var currentZone = parseFloat(sec+"."+millSec)
-
+        
         if(currentZone==targetzone||currentZone>targetzone){
-            //jet.style = "background-color:green"
-            C.style = "display: none"
-            ///toast.innerHTML=""
-            C2.style = "display: none"
+            //C.style = "display: none"
+            //C2.style = "display: none"
+            jet2.cancel()
+            jet3.play()
 
             clearInterval(counter)
             aviBackground.style = "transform:rotate(0)"
             setTimeout(() => {
+                jet3.cancel()
+              //  jet.style="margin-left:-3%; margin-top:15%;"
+            }, 400);
+            setTimeout(() => {
                  sec=1
                 millSec=0
                 muliplier.innerHTML = "flewAway "+"<br>"+currentZone+"x<br>"
-                //alert(currentZone)
-                //clearInterval(addBalace)
-                //clearInterval(addBalace2)
-                //BetAmount.value = 0
+                //PAUSE ALL ANIMATIONS...
+                jetFly.cancel()
+                anaimatingSide.pause()
+                btmDotsAnime.pause()
+
                 let bStatus= btnBet1.innerText.slice(0,7)
                 if(bStatus==="CashOut"){
                     Restart()
@@ -138,7 +162,7 @@ function increminateMultiplier() {
                
                 btnCtr2=1
                 
-            }, 10);
+            }, 1);
             
           
         }
@@ -292,7 +316,6 @@ function increminateMultiplier() {
     
     console.log(animeDuration/1000)
 
-    aviAnimate() 
 
 
     }
@@ -300,10 +323,9 @@ function increminateMultiplier() {
     , interDuration); 
     
 }
-function aviAnimate() {
-    jet.animate([
+    let jetFly=jet.animate([
         {
-            transform: "translate(0vw, 0vw)",
+            transform: "translate(0%, 0%)",
             offset:0.1
             
         },
@@ -324,19 +346,13 @@ function aviAnimate() {
         },{
             transform:"translate(64%,-32%)",
             
-        },
-        {
-            transform:"translate(128vw,-30vw)",
-            
         }
     ], {
-        duration:animeDuration,
-        easing:"ease-in",
+        duration:5000,
+        easing:"linear",
         iterations:1
         })
-    
-}
-
+       
 
  increminateMultiplier() 
  bet()
@@ -422,6 +438,70 @@ function fBtnBet2() {
     });
    
     backgroundAnimation.pause()
-            
-            
-            
+    let anaimatingSide = dots.animate([{
+        transform: "translateY(0) " ,
+        offset:0
+    },
+    {
+        transform: "translateY(8%) ",
+        offset:0.5  
+    },
+    {
+        transform: "translateY(16%) " , 
+        offset:1.0  
+
+    }],{
+        duration:1000,
+        iterations:Infinity,
+        easing:"linear"
+    })
+
+    let btmDotsAnime = btmDots.animate([{
+        transform: "translateX(0) " ,
+        offset:0
+    },
+    {
+        transform: "translateX(-8%) ",
+        offset:0.5  
+    },
+    {
+        transform: "translateX(-16%) " ,
+        offset:1.0  
+
+    }],{
+        duration:5000,
+        iterations:Infinity,
+        easing:"linear"
+    });
+        let jet2 = jet.animate([
+      
+            {
+                transform:"translate(94%,-62%)",
+                
+            },
+            {
+                transform:"translate(74%,-16%)",
+                
+            },],{
+            duration:2500,
+            iterations:Infinity,
+            easing:"ease-in-out",
+            direction:"alternate"
+        })
+
+    let jet3 = jet.animate([{
+        transform:"translate(84%,-26%)",
+        offset:0.01
+    },{
+        transform:"translate(200%,-200%)",
+        offset:0.05
+    }
+],{
+    duration:2000,
+    iterations:1
+    });
+    jet3.cancel()
+    jet2.cancel()
+    anaimatingSide.pause()
+    btmDotsAnime.pause()  
+    jetFly.pause()  
