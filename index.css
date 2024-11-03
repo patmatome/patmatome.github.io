@@ -1,0 +1,291 @@
+
+*{
+    color: wheat;
+    padding: 0px;
+}
+.logoName h3{
+    position: relative;
+    color: skyblue;
+    margin-top: -15%;
+}
+
+.logoImg{
+    width: 100%;
+    height: 100%;
+
+}
+.logoImg img{
+    width: 60%;
+    margin-top: -5%;
+}
+
+
+li{
+    display: inline-flex;
+    list-style: none;
+    font-weight: bold;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+ul{
+    display: inline-flex;
+    list-style: none;
+    font-weight: bold;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+.nav{
+    display: grid;
+    grid-template-columns: 60% 30%;
+}
+.topHeader.sticky.scroll{
+    display: flex;
+    position: fixed;
+    top: 50px;
+    background-color: black;
+}
+header{
+    width: 100%;
+   display: grid;
+   background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/milkyway.jpg');
+   height: 80vh;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: sticky;
+}
+.midfront{
+    display: grid;
+    justify-content: center;
+}
+.btns{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: auto auto;
+    gap: 10px;
+    margin-top: -200px;
+
+}
+
+.btns button{
+    width: 115px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-size: 19px;
+}
+.fName{
+    font-size: 70px;
+}
+.abt{
+    display: grid;
+    grid-template-columns: 30% 3% 50%;
+    background-color: black;
+    padding: 10px;
+}
+.abtTitle{
+    font-size: 30px;
+    text-align: end;
+}
+.midline{
+    width: 2px;
+    height: 90%;
+    background-color: white;
+    margin-left: 10%;
+}
+.abtDes{
+    font-size: 20px;
+}
+.btn button{
+    width: 115px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+    font-weight: bold;
+    font-size: 19px;
+}
+#btnServices{
+    background-color: rgb(122, 122, 122);
+}
+#btnCon{
+    border: 1px white solid;
+}
+.services{
+    text-align: center;
+    font-size: 30px;
+    color: rgb(141, 139, 117);
+}
+.servDes{
+    text-align: center;
+    font-size: 17px;
+    color: black;
+}
+#services{
+    display: grid;
+    grid-template-columns: 30% 30%;
+    justify-content: center;
+    row-gap: 5%;
+    gap: 5%;
+
+}
+.wb{
+    background-color: blueviolet;
+    height: 20vw;
+    overflow: visible;
+}
+.ServType{
+    text-align: center;
+    font-size: 20px;
+    margin: -1%;
+
+}
+.ServExp{
+    text-align: center;
+    margin: -1%;
+}
+.slideContainer{
+    margin-top: 55px;
+    display:inline-flex;
+    background-color: rgb(189, 131, 160);
+    height: min-content;
+    width: 100%;
+    gap: 3vw;
+    overflow: hidden;z-index: -10000;
+}
+.milkywaySlide{
+    color: white;
+    margin-right: 5px;
+    font-weight:700;
+    animation: belt 5s ease-in-out infinite;
+}
+.projectsLst{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    row-gap: 10vh;    
+    justify-content: center;
+}
+.p{
+    height: 25vw;
+    width: 25vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+.p1{
+    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/basicCalculator.png');
+   border: 2px solid skyblue;
+}
+.p2{
+    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/large-modern-passenger-airliner-jet.png');
+    border: 2px solid skyblue;
+
+}
+.p3{
+    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/bussinessProfile.png');
+   
+}
+.p4{
+    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/personalProfile.png');
+   
+}
+.sub{
+    font-size: medium;
+    font-weight:bold;
+}
+.form{
+    display: grid;
+    grid-template-columns: 40% 60%;
+}
+form{
+    display: grid;
+    padding: 2%;
+}
+input{
+    width: 60%;
+    height: 50%;
+    margin-left: 20%;
+    color: black;
+    font-size: 20px;
+
+}
+textarea{
+    width: 60%;
+    margin-left: 20%;
+    height: 100%;
+    resize: none;
+    border: none;
+    border-radius:-0px;
+    color: black;
+    font-size: 20px;
+
+}
+#submit{
+    width: 115px;
+    margin-left: 20%;
+    color: white;
+    background-color: pink;
+    margin-top: 2%;
+    width: 115px;
+    height: 40px;
+    border: none;
+    font-weight: bold;
+    font-size: 19px;    cursor: pointer;
+
+}
+.line{
+    border:dashed 2px white;
+    border-radius: 25%;
+}
+.topHeader{
+    position: -webkit-sticky;
+    display: grid;
+    grid-template-columns: 20% 80% 100%;
+    text-align: center;
+    justify-content: start;
+    height: 22vh;
+    animation: scroll 5s linear;
+    animation-timeline:view();
+    align-items: center;
+    z-index: 10000000;
+    float: left;width: 98.8%;
+    width: 97.6vw;
+}
+
+@keyframes scroll {
+    form{
+        opacity: 0;
+        scale: 0.5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+
+    }
+    
+}
+@keyframes belt 
+{
+    0%{
+        transform: translateX(0vw);
+    } 
+
+   100%{
+        transform: translateX(-32vw);
+    }   
+
+}
+a{
+    text-decoration: none;
+}
+@media screen and(max-width:560px) {
+    ul{
+        display: grid;
+        grid-template-columns: auto;
+    }
+}
