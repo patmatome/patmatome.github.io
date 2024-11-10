@@ -50,7 +50,7 @@ ul{
 header{
     width: 100%;
    display: grid;
-   background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/milkyway.jpg');
+   background-image: url('/milkyway.jpg');
    height: 80vh;
     background-repeat: no-repeat;
     background-position: center;
@@ -178,20 +178,20 @@ header{
 
 }
 .p1{
-    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/basicCalculator.png');
+    background-image: url('/basicCalculator.png');
    border: 2px solid skyblue;
 }
 .p2{
-    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/large-modern-passenger-airliner-jet.png');
+    background-image: url('/large-modern-passenger-airliner-jet.png');
     border: 2px solid skyblue;
 
 }
 .p3{
-    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/bussinessProfile.png');
+    background-image: url('/bussinessProfile.png');
    
 }
 .p4{
-    background-image: url('C:/Users/Maela/Desktop/Computer Science/Projects/milkyway/personalProfile.png');
+    background-image: url('/personalProfile.png');
    
 }
 .sub{
