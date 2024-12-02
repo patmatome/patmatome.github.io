@@ -179,20 +179,38 @@ header{
 }
 .p1{
     background-image: url('/basicCalculator.png');
-   border: 2px solid skyblue;
+border: 2px solid rgb(42, 46, 34);
+   animation: showw  linear;
+   animation-timeline:view();
+   animation-range: entry 0 cover 40%;
+   transform-origin: left;
 }
 .p2{
     background-image: url('/large-modern-passenger-airliner-jet.png');
-    border: 2px solid skyblue;
+border: 2px solid rgb(42, 46, 34);
+   animation: showw  linear;
+   animation-timeline:view();
+   animation-range: entry 0 cover 40%;
+   transform-origin: left;
 
 }
 .p3{
     background-image: url('/bussinessProfile.png');
-   
+   border: 2px solid rgb(42, 46, 34);
+   animation: showw  linear;
+   animation-timeline:view();
+   animation-range: entry 0 cover 40%;
+   transform-origin: left;
+
 }
 .p4{
     background-image: url('/personalProfile.png');
-   
+   border: 2px solid rgb(42, 46, 34);
+   animation: showw  linear;
+   animation-timeline:view();
+   animation-range: entry 0 cover 40%;
+   transform-origin: left;
+
 }
 .sub{
     font-size: medium;
@@ -252,9 +270,8 @@ textarea{
     animation: scroll 5s linear;
     animation-timeline:view();
     align-items: center;
-    z-index: 10000000;
-    float: left;width: 98.8%;
-    width: 97.6vw;
+    z-index: 1000000;background-color: darkslategray;
+    
 }
 
 @keyframes scroll {
@@ -271,21 +288,62 @@ textarea{
 }
 @keyframes belt 
 {
-    0%{
-        transform: translateX(0vw);
-    } 
+    
 
-   100%{
-        transform: translateX(-32vw);
+   to{
+        transform: translateX(-100vw);
     }   
 
 }
 a{
     text-decoration: none;
 }
-@media screen and(max-width:560px) {
+@media screen and (max-width:560px) {
     ul{
         display: grid;
-        grid-template-columns: auto;
+        grid-template-columns: auto auto;
     }
+    #services{
+        display: grid;
+        grid-template-columns: 40% 40%;
+        justify-content: center;
+        row-gap: 5%;
+        gap: 5%;
+    
+    }
+    .wb{
+        background-color: blueviolet;
+        height:20vh;
+        overflow: visible;
+    }
+}
+.wts{
+    background-image: url('/');
+}
+.fb, .wts{
+    background-image: url('/');
+    width:8vw;
+    height: 8vw;
+    border: 2px skyblue solid;
+    border-radius: 50%;
+    cursor: pointer;
+    max-width: 30px;
+    max-height: 30px;
+}
+.fb, .wts:hover{
+    box-shadow: 0px 0px 0px 3px skyblue;
+    
+}
+@keyframes showw {
+    from{
+        opacity: 0;
+        scale: 0.5;
+        
+
+    }to{
+        opacity: 2;
+        scale: 1;
+
+    }
+    
 }
