@@ -310,6 +310,16 @@ a{
     text-decoration: none;
 }
 @media screen and (max-width:560px) {
+    .nav{
+    display: grid;
+    grid-template-columns: 60% 40%;
+}
+    .nav ul{
+        display: grid;
+        justify-content: right;
+        width: inherit;
+    } 
+}
     ul{
         display: grid;
         grid-template-columns: auto auto;
