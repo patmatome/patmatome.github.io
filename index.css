@@ -328,7 +328,7 @@ a{
     } 
     ul{
         display: grid;
-        grid-template-columns: auto auto;
+        grid-template-columns: auto;
     }
     #services{
         display: grid;
