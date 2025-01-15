@@ -416,7 +416,7 @@ a{
         height: 100vh;
         top: 20.5vw;
         width: 50vw;
-        visibility: visible;
+        visibility: collapse;
         justify-content: center;
         border-left: 2px solid red;
         align-items: center;
@@ -447,7 +447,8 @@ a{
         margin: 2vw;
     }
     #menu:checked~ .topHeader >.nav>#ls{
-        right: 5px;
+        right: 5vw;
+        visibility: visible;
     }
     
 }
