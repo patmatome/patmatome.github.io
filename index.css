@@ -398,7 +398,7 @@ a{
 }
 @media screen and (max-width:900px) {
     #ls{
-        right: -100vw;
+        right: -64vw;
     }    
     .toggle-containe{
         display: block;
