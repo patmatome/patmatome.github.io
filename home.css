@@ -406,6 +406,8 @@ header{
              width: 25px;
              margin-top: 10px;
              transform:rotate(-45deg) ;
+	     background-color:red;
+          
          }
          #check:checked ~label>.midLine{
              display: none;
@@ -416,6 +418,7 @@ header{
              width: 25px;
              margin-top: 9px;
              transform:rotate(45deg) ;
+		 background-color:red;
              
          }
          #check:checked ~ nav>ul{
@@ -424,7 +427,7 @@ header{
 
          }
          #check:checked~.toggle{
-             background-color: red;
+             background-color: inherite;
              
          }
  
