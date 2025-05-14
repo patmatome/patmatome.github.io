@@ -331,8 +331,8 @@ header{
  
          }
          .navbar.navbar>ul>li{
-            
-             font-size:150%;
+                 text-align: center;
+		 font-size:150%;
          }
          li a{
             color:rgb(15, 241, 241);
