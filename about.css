@@ -1,79 +1,110 @@
-.aboutContainer{
-    display: grid;
-    width: 100%;
-    padding-top: 5vh;
-    text-align: center;
+/* ABOUT PAGE STYLES */
+.aboutContainer {
+  display: grid;
+  width: 100%;
+  padding-top: 5vh;
+  text-align: center;
+  gap: 2rem;
 }
-/*details{
-    width: 100%;
-}*/
-.aboutContainer summary{
-    display: inline;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border:0px navy groove;
-    background-color: crimson;
-    box-shadow: 0px 0px 3px 3px navy;
-    cursor:pointer;
-    margin-top: 5vh;
-    width:100%;
-    text-align: center;
-    
-    
-}
-#modules-summary{
-    display: inline;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border:0px navy groove;
-    background-color: rgb(148, 36, 64);
-    box-shadow: 0px 0px 3px 3px navy;
-    cursor:pointer;
-    margin-top: 5vh;
-    width:100%;
-    text-align: center;
-    
-    
-}
-#sub-title{
-    margin-top: 10px;
-    width: 50%;
-    color:rgb(42, 176, 230);
-    text-align: center;
-    font-weight: bold;
-    text-decoration: underline;
-}
-table{
-    margin-top: 20px;
-    margin-left:10%;
-    resize: both;
-    border: solid 2px skyblue;
-    width:60%;
-    border-radius: 2px;
-    text-align: start;
-}
-.modules{
-color: green;
-}
-.sum-abt{
-    background-color:rgb(10, 82, 110);
-    padding: 5%;
-    margin :5%;
-    border-radius: 10px;
-    font-style: italic;
 
+.aboutContainer summary {
+  display: inline-block;
+  padding: 10px;
+  background-color: crimson;
+  box-shadow: 0 0 5px navy;
+  cursor: pointer;
+  width: 100%;
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: white;
+  transition: background-color 0.3s ease;
 }
-@media screen and (max-width:430px) {
-    table{
-        margin-left:0%;
-        resize: both;
-        border: solid 2px navy;
-        width:100%;
-    }
-    .sum-abt{
-        background-color:rgb(10, 82, 110);
-        padding: 5%;
-        margin :5% auto;border-radius: 0;
-        
-    }
+
+.aboutContainer summary:hover {
+  background-color: navy;
+}
+
+#modules-summary {
+  background-color: rgb(148, 36, 64);
+  box-shadow: 0 0 3px navy;
+  padding: 10px;
+  cursor: pointer;
+  display: block;
+  margin: 10px auto;
+  text-align: center;
+  font-weight: bold;
+  color: white;
+}
+
+#sub-title {
+  margin-top: 10px;
+  width: 50%;
+  color: rgb(42, 176, 230);
+  text-align: center;
+  font-weight: bold;
+  text-decoration: underline;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.aboutContainer table {
+  margin-top: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  border: solid 2px skyblue;
+  width: 80%;
+  border-radius: 4px;
+  text-align: start;
+  background-color: white;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.aboutContainer td, .aboutContainer th {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.aboutContainer ul {
+  text-align: left;
+  padding-left: 20px;
+  list-style: square;
+  color: darkgreen;
+}
+
+.sum-abt {
+  background-color: rgb(10, 82, 110);
+  padding: 5%;
+  margin: 5% auto;
+  border-radius: 10px;
+  font-style: italic;
+  color: white;
+  line-height: 1.6;
+  max-width: 90%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+.cert-note {
+  color: crimson;
+  padding-top: 5%;
+  font-style: italic;
+}
+
+.about-section {
+  transition: transform 0.4s ease;
+}
+
+.about-section:hover {
+  transform: scale(1.02);
+}
+
+@media screen and (max-width: 430px) {
+  .aboutContainer table {
+    width: 100%;
+  }
+  .sum-abt {
+    border-radius: 0;
+  }
+  #sub-title {
+    width: 90%;
+  }
 }
