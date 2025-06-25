@@ -1,108 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Animated Projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects</title>
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #111;
-      color: #fff;
-    }
+    body {}
 
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 30px;
-      padding: 40px;
+      justify-content: center;
+      grid-template-columns: auto auto;
+      justify-content: space-evenly;
+      font-size: unset;
+      font-weight: normal;
+      margin-top: 10%;
+      row-gap: 30px;
     }
 
     .project {
-      background-size: cover;
-      background-position: center;
-      height: 250px;
-      border-radius: 12px;
-      position: relative;
-      overflow: hidden;
-      display: flex;
-      align-items: flex-end;
-      padding: 15px;
-      animation: fadeInUp 0.8s ease forwards;
-      opacity: 0;
-      transform: translateY(30px);
-      transition: background-size 0.4s ease;
-    }
-
-    .project:nth-child(1) { animation-delay: 0.1s; }
-    .project:nth-child(2) { animation-delay: 0.2s; }
-    .project:nth-child(3) { animation-delay: 0.3s; }
-
-    .project:hover {
-      background-size: 120%;
-    }
-
-    .project-info {
-      background-color: rgba(0, 0, 0, 0.6);
-      padding: 10px;
-      border-radius: 8px;
-      width: 100%;
-      transform: translateY(20px);
-      opacity: 0;
-      transition: all 0.3s ease;
-    }
-
-    .project:hover .project-info {
-      transform: translateY(0);
-      opacity: 1;
-    }
-
-    .project h3 {
-      margin: 0;
-      font-size: 1.2rem;
-    }
-
-    .project p {
-      margin: 5px 0 0;
-      font-size: 0.9rem;
-    }
-
-    @keyframes fadeInUp {
-      to {
-        opacity: 1;
-        transform: translateY(0);
-      }
-    }
-
-    @media screen and (max-width: 600px) {
-      .project {
-        height: 200px;
-      }
+      display: grid;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="project" style="background-image: url('milkyway.jpg')">
-      <div class="project-info">
-        <h3>Milkyway</h3>
-        <p>Business website offering internet café services, tech support (repairs, dev, design, networking).</p>
-      </div>
+    <div class="project" style="background-image: url('milkyway.jpg'); width: 150px; height: 150px;">
+      Milkyway
     </div>
-
-    <div class="project" style="background-image: url('personalProfile.png')">
-      <div class="project-info">
-        <h3>My Portfolio</h3>
-        <p>Responsive portfolio site showcasing my frontend projects and contact details.</p>
-      </div>
+    <div class="project" style="background-image: url('portfolio.jpg'); width: 150px; height: 150px;">
+      Portfolio
     </div>
-
-    <div class="project" style="background-image: url('bussinessProfile.png')">
-      <div class="project-info">
-        <h3>Financial Site</h3>
-        <p>A Basic Stock & Currencies Exchange including digital currencies such as Bitcoin</p>
-      </div>
+    <div class="project" style="background-image: url('ecommerce.jpg'); width: 150px; height: 150px;">
+      E-commerce
+    </div>
+    <div class="project" style="background-image: url('weatherapp.jpg'); width: 150px; height: 150px;">
+      Weather App
     </div>
   </div>
 </body>
