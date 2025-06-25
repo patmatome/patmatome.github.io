@@ -1,91 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/home.css">
-    <link rel="stylesheet" href="/projects.css">
-    <title>projects</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/home.css">
+  <link rel="stylesheet" href="/projects.css">
+  <title>Projects</title>
+  <style>
+    .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin: 5% auto;
+      padding: 2%;
+      max-width: 1200px;
+    }
 
+    .project {
+      background-color: #f0f0f0;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      position: relative;
+      cursor: pointer;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .project:hover {
+      transform: scale(1.03);
+      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .project img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      transition: transform 0.5s ease;
+    }
+
+    .project:hover img {
+      transform: scale(1.1);
+    }
+
+    .project-title {
+      padding: 15px;
+      background: #222;
+      color: white;
+      text-align: center;
+    }
+
+    .project-desc {
+      padding: 15px;
+      background-color: white;
+      color: #333;
+      font-size: 0.9rem;
+    }
+  </style>
 </head>
+
 <body>
-    <header>
-        
-        <input type="checkbox" id="check">
-        <label for="check" class="toggle">
-            <span class="topLine line"></span>
-            <span class="midLine line "></span>
-            <span class="btmLine line"></span>
+  <header>
+    <input type="checkbox" id="check">
+    <label for="check" class="toggle">
+      <span class="topLine line"></span>
+      <span class="midLine line"></span>
+      <span class="btmLine line"></span>
+    </label>
+    <nav class="navbar">
+      <div class="logo">MaelaPat</div>
+      <ul>
+        <li><a href="index.html">HOME</a></li>
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="contact.html">CONTACT</a></li>
+        <li><a href="projects.html" class="active">PROJECTS</a></li>
+        <li><a href="services.html">SERVICES</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        </label>
-        <nav class="navbar">
-            <div class="logo">
-                MaelaPat
-            </div>
-            <ul>
-                <li><a href="index.html">HOME</a></li>
-                <li><a href="about.html">ABOUT</a></li>
-                <li><a href="contact.html">CONTACT</a></li>
-                <li><a href="projects.html" class="active">PROJECTS</a></li>
-                <li><a href="services.html">SERVICES</a></li>
-            </ul>
-
-        </nav>
-    </input>
-    </header>
-    <main>
-        <!---CREATING A GRID VIEW OF MY PROJECTS INSIDE PROJECT CONTAINER--->
-       <section id="projects-container" class="container">
-
-            <a href="/calculator.html" class="Basic-calculator project">
-                <img src="/basicCalculator.png" alt="basicCalculatorImg">
-                <div class="project-title">
-                    <p>Scientific Calculator and Quadratic Calculator</p>
-                </div>
-                
-            </a>
-            <a href="C:\Users\Maela\Desktop\Computer Science\Projects\project\html\Company.html" class="company-tamplate project">
-                <img src="/bussinessProfile.png" alt="bussinessProfileImg">
-                <div class="project-title">
-                    <p>Business Website Tamplate</p>
-                </div>
-            </a>
-            <a href="index.html" class="portfolio project">
-                <img src="/personalProfile.png" alt="personalProfileImg">
-                <div class="project-title">
-                    <p>My Portfolio</p>
-                </div>
-            </a>
-            <a href="aviator.html" class="portfolio project">
-                <img src="large-modern-passenger-airliner-jet.png" alt="AviatorJetImg">
-                <div class="project-title">
-                    <p>Betting Aviator Jet</p>
-                </div>
-            </a>
-	          <a href="milkyWay.html" class="portfolio project">
-                <img src="/milyWayLG.png" alt="AviatorJetImg">
-                <div class="project-title">
-                    <p>MilkyWay Projects</p>
-                </div>
-            </a>
-       </section>
-       <br><br><br><br><br><br><br><br><br>
-        
-    </main>
-    <footer id="footer">
-        <div class="ftrContainer">
-            <img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\lnk.jpg" >
-				<img src="/whatsapp.jpg">
-		
-				<img src="/x.jpg">
-				<img src="/fb.jpg">
-				<img src="/lnk.jpg" >
-				<img src="/ins.jpg">
+  <main>
+    <section id="projects-container" class="container">
+      <a href="/calculator.html" class="project">
+        <img src="/basicCalculator.png" alt="Calculator">
+        <div class="project-title">Scientific & Quadratic Calculator</div>
+        <div class="project-desc">
+          A browser-based calculator that handles both scientific and quadratic operations using JavaScript.
         </div>
-        <p>
-            &copy Rights reserved by Maela Matome Pat
-        </p>
-    </footer>
+      </a>
 
+      <a href="#" class="project">
+        <img src="/bussinessProfile.png" alt="Business Website">
+        <div class="project-title">Business Website Template</div>
+        <div class="project-desc">
+          A professional multi-page business template with responsive design and service sections.
+        </div>
+      </a>
+
+      <a href="index.html" class="project">
+        <img src="/personalProfile.png" alt="Portfolio">
+        <div class="project-title">Personal Portfolio</div>
+        <div class="project-desc">
+          My own portfolio site showcasing skills, education, and projects in a stylish layout.
+        </div>
+      </a>
+
+      <a href="aviator.html" class="project">
+        <img src="/large-modern-passenger-airliner-jet.png" alt="Aviator">
+        <div class="project-title">Aviator Betting Game</div>
+        <div class="project-desc">
+          A simple web-based demo of a betting-style aviator game using HTML/CSS/JS.
+        </div>
+      </a>
+
+      <a href="milkyWay.html" class="project">
+        <img src="/milyWayLG.png" alt="MilkyWay">
+        <div class="project-title">MilkyWay Projects</div>
+        <div class="project-desc">
+          An animated and educational simulation about our solar system and Milky Way galaxy.
+        </div>
+      </a>
+    </section>
+    <br><br><br>
+  </main>
+
+  <footer id="footer">
+    <div class="ftrContainer">
+      <img src="/whatsapp.jpg">
+      <img src="/x.jpg">
+      <img src="/fb.jpg">
+      <img src="/lnk.jpg">
+      <img src="/ins.jpg">
+    </div>
+    <p>&copy; Rights reserved by Maela Matome Pat</p>
+  </footer>
 </body>
-</html>
+	</html>
+		    
