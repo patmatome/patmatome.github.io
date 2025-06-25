@@ -5,7 +5,9 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-
+#check{
+  display: none;
+}
 body {
   background: linear-gradient(135deg, #3b3f5c, #6c7a89);
   color: #f0f0f5;
@@ -96,7 +98,7 @@ header#me {
   overflow: hidden;
   border: 5px solid #00bfa5;
   box-shadow: 0 4px 12px rgba(0, 191, 165, 0.7);
-  background: url('/profile.jpg') center center/cover no-repeat;
+  background: url('/myImage.jpg') center center/cover no-repeat;
 }
 
 .welcome {
