@@ -1,37 +1,86 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects | MaelaPat</title>
   <link rel="stylesheet" href="/home.css">
   <link rel="stylesheet" href="/projects.css">
-  <title>Projects</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    body {
+      background: #f7f8fc;
+      color: #333;
+    }
+
+    header {
+      background: #272b3a;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    }
+
+    .logo {
+      color: #00bfa5;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      gap: 1.5rem;
+    }
+
+    .navbar ul li a {
+      text-decoration: none;
+      color: white;
+      font-weight: 600;
+      transition: color 0.3s;
+    }
+
+    .navbar ul li a:hover,
+    .navbar ul li a.active {
+      color: #00bfa5;
+    }
+
+    .toggle {
+      display: none;
+    }
+
     .container {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 30px;
-      margin: 5% auto;
-      padding: 2%;
+      padding: 3% 5%;
+      margin: auto;
       max-width: 1200px;
+      animation: fadeIn 1s ease-in;
     }
 
     .project {
-      background-color: #f0f0f0;
-      border: 1px solid #ccc;
-      border-radius: 10px;
+      background-color: #fff;
+      border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
-      position: relative;
-      cursor: pointer;
       text-decoration: none;
       color: inherit;
+      position: relative;
+      animation: slideUp 0.7s ease-in forwards;
     }
 
     .project:hover {
-      transform: scale(1.03);
-      box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.3);
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
     }
 
     .project img {
@@ -46,21 +95,74 @@
     }
 
     .project-title {
-      padding: 15px;
-      background: #222;
-      color: white;
+      background-color: #222;
+      color: #fff;
+      padding: 12px;
+      font-weight: 600;
       text-align: center;
     }
 
     .project-desc {
       padding: 15px;
-      background-color: white;
-      color: #333;
-      font-size: 0.9rem;
+      font-size: 0.95rem;
+      color: #444;
+    }
+
+    footer {
+      background: #272b3a;
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .ftrContainer {
+      display: flex;
+      justify-content: center;
+      gap: 1.2rem;
+      margin-bottom: 0.5rem;
+    }
+
+    .ftrContainer img {
+      width: 30px;
+      height: 30px;
+      filter: grayscale(100%);
+      transition: filter 0.3s ease;
+    }
+
+    .ftrContainer img:hover {
+      filter: grayscale(0%);
+    }
+
+    @keyframes slideUp {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (max-width: 768px) {
+      .navbar ul {
+        flex-direction: column;
+        display: none;
+      }
+      #check:checked ~ .navbar ul {
+        display: flex;
+        position: absolute;
+        top: 60px;
+        background: #272b3a;
+        right: 2rem;
+        padding: 1rem;
+        border-radius: 8px;
+      }
+      .toggle {
+        display: block;
+      }
     }
   </style>
 </head>
-
 <body>
   <header>
     <input type="checkbox" id="check">
@@ -82,60 +184,49 @@
   </header>
 
   <main>
-    <section id="projects-container" class="container">
+    <section class="container">
       <a href="/calculator.html" class="project">
         <img src="/basicCalculator.png" alt="Calculator">
         <div class="project-title">Scientific & Quadratic Calculator</div>
-        <div class="project-desc">
-          A browser-based calculator that handles both scientific and quadratic operations using JavaScript.
-        </div>
+        <div class="project-desc">A browser-based calculator that handles both scientific and quadratic operations using JavaScript.</div>
       </a>
 
       <a href="#" class="project">
         <img src="/bussinessProfile.png" alt="Business Website">
         <div class="project-title">Business Website Template</div>
-        <div class="project-desc">
-          A professional multi-page business template with responsive design and service sections.
-        </div>
+        <div class="project-desc">A professional multi-page business template with responsive design and service sections.</div>
       </a>
 
       <a href="index.html" class="project">
         <img src="/personalProfile.png" alt="Portfolio">
         <div class="project-title">Personal Portfolio</div>
-        <div class="project-desc">
-          My own portfolio site showcasing skills, education, and projects in a stylish layout.
-        </div>
+        <div class="project-desc">My own portfolio site showcasing skills, education, and projects in a stylish layout.</div>
       </a>
 
       <a href="aviator.html" class="project">
         <img src="/large-modern-passenger-airliner-jet.png" alt="Aviator">
         <div class="project-title">Aviator Betting Game</div>
-        <div class="project-desc">
-          A simple web-based demo of a betting-style aviator game using HTML/CSS/JS.
-        </div>
+        <div class="project-desc">A simple web-based demo of a betting-style aviator game using HTML/CSS/JS.</div>
       </a>
 
       <a href="milkyWay.html" class="project">
         <img src="/milyWayLG.png" alt="MilkyWay">
         <div class="project-title">MilkyWay Projects</div>
-        <div class="project-desc">
-          An animated and educational simulation about our solar system and Milky Way galaxy.
-        </div>
+        <div class="project-desc">An animated and educational simulation about our solar system and Milky Way galaxy.</div>
       </a>
     </section>
-    <br><br><br>
   </main>
 
-  <footer id="footer">
+  <footer>
     <div class="ftrContainer">
-      <img src="/whatsapp.jpg">
-      <img src="/x.jpg">
-      <img src="/fb.jpg">
-      <img src="/lnk.jpg">
-      <img src="/ins.jpg">
+      <img src="/whatsapp.jpg" alt="WhatsApp">
+      <img src="/x.jpg" alt="Twitter">
+      <img src="/fb.jpg" alt="Facebook">
+      <img src="/lnk.jpg" alt="LinkedIn">
+      <img src="/ins.jpg" alt="Instagram">
     </div>
     <p>&copy; Rights reserved by Maela Matome Pat</p>
   </footer>
 </body>
 	</html>
-		    
+	    
