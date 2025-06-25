@@ -98,7 +98,7 @@ header#me {
   overflow: hidden;
   border: 5px solid #00bfa5;
   box-shadow: 0 4px 12px rgba(0, 191, 165, 0.7);
-  background: url('/myImage.jpg') center center/cover no-repeat;
+  background: url('/myImg.png') center center/cover no-repeat;
 }
 
 .welcome {
