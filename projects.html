@@ -6,17 +6,61 @@
     <link rel="stylesheet" href="/home.css">
     <link rel="stylesheet" href="/projects.css">
     <title>projects</title>
+    <style>
+        /* Responsive Grid */
+        .container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            padding: 20px;
+        }
 
+        .project {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: #1a1a1a;
+            padding: 15px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+            opacity: 0;
+            transform: translateY(50px);
+            transition: all 0.6s ease-out;
+        }
+
+        .project img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            margin-bottom: 10px;
+        }
+
+        .project-title p {
+            margin: 0;
+            font-size: 1rem;
+            color: #fff;
+        }
+
+        .project-description {
+            margin-top: 10px;
+            color: #ccc;
+            font-size: 0.9rem;
+        }
+
+        .show {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    </style>
 </head>
 <body>
     <header>
-        
         <input type="checkbox" id="check">
         <label for="check" class="toggle">
             <span class="topLine line"></span>
             <span class="midLine line "></span>
             <span class="btmLine line"></span>
-
         </label>
         <nav class="navbar">
             <div class="logo">
@@ -29,63 +73,74 @@
                 <li><a href="projects.html" class="active">PROJECTS</a></li>
                 <li><a href="services.html">SERVICES</a></li>
             </ul>
-
         </nav>
-    </input>
     </header>
-    <main>
-        <!---CREATING A GRID VIEW OF MY PROJECTS INSIDE PROJECT CONTAINER--->
-       <section id="projects-container" class="container">
 
+    <main>
+        <section id="projects-container" class="container">
             <a href="/calculator.html" class="Basic-calculator project">
                 <img src="/basicCalculator.png" alt="basicCalculatorImg">
                 <div class="project-title">
                     <p>Scientific Calculator and Quadratic Calculator</p>
                 </div>
-                
+                <div class="project-description">Performs advanced and quadratic operations with responsive UI.</div>
             </a>
             <a href="C:\Users\Maela\Desktop\Computer Science\Projects\project\html\Company.html" class="company-tamplate project">
                 <img src="/bussinessProfile.png" alt="bussinessProfileImg">
                 <div class="project-title">
-                    <p>Business Website Tamplate</p>
+                    <p>Business Website Template</p>
                 </div>
+                <div class="project-description">A modern company profile template with clean layout and contact info.</div>
             </a>
             <a href="index.html" class="portfolio project">
                 <img src="/personalProfile.png" alt="personalProfileImg">
                 <div class="project-title">
                     <p>My Portfolio</p>
                 </div>
+                <div class="project-description">A responsive personal site showcasing my work and skills.</div>
             </a>
             <a href="aviator.html" class="portfolio project">
                 <img src="large-modern-passenger-airliner-jet.png" alt="AviatorJetImg">
                 <div class="project-title">
                     <p>Betting Aviator Jet</p>
                 </div>
+                <div class="project-description">Simulates aviator-style betting game with plane animation.</div>
             </a>
-	          <a href="milkyWay.html" class="portfolio project">
-                <img src="/milyWayLG.png" alt="AviatorJetImg">
+            <a href="milkyWay.html" class="portfolio project">
+                <img src="/milyWayLG.png" alt="MilkyWayImg">
                 <div class="project-title">
                     <p>MilkyWay Projects</p>
                 </div>
+                <div class="project-description">Offers internet café services and technical support: web dev, software/hardware repairs, networking, logo/poster designs.</div>
             </a>
-       </section>
-       <br><br><br><br><br><br><br><br><br>
-        
+        </section>
+        <br><br><br><br><br><br><br><br><br>
     </main>
+
     <footer id="footer">
         <div class="ftrContainer">
-            <img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\lnk.jpg" >
-				<img src="/whatsapp.jpg">
-		
-				<img src="/x.jpg">
-				<img src="/fb.jpg">
-				<img src="/lnk.jpg" >
-				<img src="/ins.jpg">
+            <img src="C:\Users\Maela\Desktop\Computer Science\Projects\projectProfile\images\lnk.jpg">
+            <img src="/whatsapp.jpg">
+            <img src="/x.jpg">
+            <img src="/fb.jpg">
+            <img src="/lnk.jpg">
+            <img src="/ins.jpg">
         </div>
-        <p>
-            &copy Rights reserved by Maela Matome Pat
-        </p>
+        <p>&copy; Rights reserved by Maela Matome Pat</p>
     </footer>
 
+    <script>
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('show');
+                }
+            });
+        }, { threshold: 0.2 });
+
+        document.querySelectorAll('.project').forEach(project => {
+            observer.observe(project);
+        });
+    </script>
 </body>
 </html>
