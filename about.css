@@ -96,6 +96,8 @@
 .about-section:hover {
   transform: scale(1.02);
 }
+table{
+  color:black;
 
 @media screen and (max-width: 430px) {
   .aboutContainer table {
