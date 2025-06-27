@@ -7,73 +7,39 @@
     <link rel="stylesheet" href="/projects.css">
     <title>projects</title>
     <style>
-        /* Responsive Grid */
+        body {
+            margin: 0;
+            background-color: #121212;
+            color: #fff;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: #1f1f2e;
+            z-index: 1000;
+        }
+
+        main {
+            padding-top: 100px;
+        }
+
         .container {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
             gap: 20px;
             padding: 20px;
-        }/* Responsive Grid */
-.container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
-    padding: 20px;
-    justify-content: center;
-}
-
-.project {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    background-color: #1a1a1a;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-    opacity: 0;
-    transform: translateY(50px);
-    transition: all 0.6s ease-out;
-    width: 100%;
-    max-width: 480px;
-    margin: 0 auto;
-}
-
-.project img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 10px;
-    transition: transform 0.3s ease;
-}
-
-.project:hover img {
-    transform: scale(1.05);
-}
-
-.project-title p {
-    margin: 0;
-    font-size: 1rem;
-    color: #fff;
-}
-
-.project-description {
-    margin-top: 10px;
-    color: #ccc;
-    font-size: 0.9rem;
-}
-
-.show {
-    opacity: 1;
-    transform: translateY(0);
+            justify-content: center;
         }
-            
 
         .project {
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: #1a1a1a;
+            background-color: #2a2a3c;
             padding: 15px;
             border-radius: 10px;
             text-align: center;
@@ -81,6 +47,9 @@
             opacity: 0;
             transform: translateY(50px);
             transition: all 0.6s ease-out;
+            width: 100%;
+            max-width: 480px;
+            margin: 0 auto;
         }
 
         .project img {
@@ -88,6 +57,11 @@
             height: auto;
             border-radius: 8px;
             margin-bottom: 10px;
+            transition: transform 0.3s ease;
+        }
+
+        .project:hover img {
+            transform: scale(1.05);
         }
 
         .project-title p {
@@ -106,6 +80,15 @@
             opacity: 1;
             transform: translateY(0);
         }
+
+        .intro-text {
+            text-align: center;
+            padding: 20px;
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 40px;
+            color: #ddd;
+        }
     </style>
 </head>
 <body>
@@ -117,9 +100,7 @@
             <span class="btmLine line"></span>
         </label>
         <nav class="navbar">
-            <div class="logo">
-                MaelaPat
-            </div>
+            <div class="logo">MaelaPat</div>
             <ul>
                 <li><a href="index.html">HOME</a></li>
                 <li><a href="about.html">ABOUT</a></li>
@@ -131,6 +112,10 @@
     </header>
 
     <main>
+        <div class="intro-text">
+            Explore a diverse collection of web development projects built with creativity, performance, and user experience in mind. Whether you're a potential employer or client, these projects showcase my ability to solve real-world problems using modern technologies and responsive design.
+        </div>
+
         <section id="projects-container" class="container">
             <a href="/calculator.html" class="Basic-calculator project">
                 <img src="/basicCalculator.png" alt="basicCalculatorImg">
