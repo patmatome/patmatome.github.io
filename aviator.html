@@ -1,187 +1,233 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>aviator</title>
-    <link rel="stylesheet" href="/avioato.css">
-    <script defer src="/let_x=0;.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aviator Game</title>
+  <link rel="stylesheet" href="/avioato.css">
+  <script defer src="/let_x=0;.js"></script>
+  <style>
+    *, *::before, *::after {
+      box-sizing: border-box;
+      padding: 0;
+      margin: 0;
+    }
+
+    body {
+      background-color: rgb(11, 12, 12);
+      color: white;
+      font-size: 16px;
+      font-family: Arial, sans-serif;
+      overflow-x: hidden;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: rgb(15, 15, 15);
+      padding: 0.5rem 1rem;
+    }
+
+    .logo h2 {
+      font-style: italic;
+      color: red;
+    }
+
+    .balance {
+      display: flex;
+      gap: 0.25rem;
+    }
+
+    .toast {
+      position: fixed;
+      top: 30px;
+      left: 0;
+      width: 100%;
+      display: none;
+      justify-content: center;
+      z-index: 1000;
+      pointer-events: none;
+    }
+
+    .toast.active {
+      display: flex;
+    }
+
+    .casOuta {
+      display: grid;
+      grid-template-columns: 3fr 2fr;
+      align-items: center;
+      background-color: rgba(21, 56, 21, 0.6);
+      height: 55px;
+      width: 90%;
+      max-width: 600px;
+      border-radius: 50px;
+      border: 2px solid white;
+      overflow: hidden;
+    }
+
+    .cc {
+      background-color: rgba(0, 128, 0, 0.822);
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 0 50px 50px 0;
+    }
+
+    .containerAnime {
+      width: 95%;
+      max-width: 1000px;
+      margin: auto;
+      border: 2px white solid;
+      display: grid;
+      overflow: hidden;
+      border-radius: 25px;
+      grid-template-columns: 5% 95%;
+      height: 75vw;
+      grid-template-rows: 95% 5%;
+      margin-top: 1rem;
+    }
+
+    .avi-container {
+      display: grid;
+      height: 70vw;
+      overflow: hidden;
+      background-color: rgba(0, 0, 0, 0.466);
+    }
+
+    .avi-jet {
+      width: 20%;
+      border-radius: 100px;
+      margin-left: -3%;
+      margin-top: 15%;
+      transform: rotate(8deg);
+    }
+
+    .avi-jet img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .zone {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      font-size: 2rem;
+      font-weight: bold;
+      text-shadow: skyblue 5px 5px 20px;
+    }
+
+    .section, .section1 {
+      width: 95%;
+      max-width: 500px;
+      margin: 1rem auto;
+      padding: 1rem;
+      background-color: rgb(36, 37, 37);
+      border-radius: 15px;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .bet {
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    .bet-button {
+      background-color: green;
+      color: white;
+      padding: 0.75rem 1rem;
+      border: none;
+      border-radius: 10px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    .bet-amount input {
+      width: 100%;
+      background-color: black;
+      color: white;
+      padding: 0.5rem;
+      border: none;
+      border-radius: 10px;
+      text-align: center;
+    }
+
+    .btn-amount {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .btn-amount button {
+      flex: 1 1 22%;
+      padding: 0.5rem;
+      border: none;
+      background-color: #1a1d1d;
+      color: white;
+      border-radius: 10px;
+    }
+
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+    }
+
+    .ad {
+      background-color: #222;
+      color: white;
+      padding: 1rem;
+      border-radius: 10px;
+      cursor: pointer;
+      border: none;
+    }
+
+    @media screen and (min-width: 768px) {
+      .containerAnime {
+        height: 480px;
+      }
+
+      .avi-container {
+        height: 440px;
+      }
+
+      .avi-jet {
+        width: 10%;
+        margin-left: -1%;
+        margin-top: 8%;
+      }
+
+      .section, .section1 {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .zone {
+        font-size: 3rem;
+      }
+    }
+  </style>
 </head>
-  <body>
-    <div id="C" style="display:block;visibility: hidden ; justify-content:center;  position: fixed; top: 30px; justify-content: center;width: 100vw; z-index: 1000;" class="toast">
-        <div class="casOuta" style="padding-right:2px; margin-left: 20%; text-align: center; display:grid;grid-template-columns: 60% 40%; align-items: center; background-color: rgba(21, 56, 21, 0.479); height: 55px; width:60%; border-radius: 50px; border:2px solid white;">
-            <div id="toastLvl" >s</div>
-            <div class="cc" style="position: inherit; margin-top: 0px; background-color: rgba(0, 128, 0, 0.822); height: 54px; border-radius: 25px; ">
-                <p id="toastCash">fdd</p>
-            </div>
-          </div>
-    </div> 
-    <div id="C2" style="display:block;visibility: hidden ; justify-content:center;  position: fixed;margin-top: 20px; justify-content: center;width: 100vw; z-index: 1000;" class="toast">
-        <div class="casOuta" style="padding-right:2px; margin-left: 20%; text-align: center; display:grid;grid-template-columns: 60% 40%; align-items: center; background-color: rgba(21, 56, 21, 0.479); height: 55px; width:60%; border-radius: 50px; border:2px solid white;">
-            <div id="toastlvl2" >
-                
-            </div>
-            <div class="cc" style="position: inherit; margin-top: 0px; background-color: rgba(0, 128, 0, 0.822); height: 54px; border-radius: 25px; ">
-                <p id="toastCash2"></p>
-            </div>
-          </div>
+<body>
+
+  <!-- Toast Notification -->
+  <div id="C" class="toast">
+    <div class="casOuta">
+      <div id="toastLvl">Cashout</div>
+      <div class="cc">
+        <p id="toastCash">R 0.00</p>
+      </div>
     </div>
-    <header style="position: absolute; margin-top:0px;width: 100%; z-index: 20;">
-        <div class="logo"><h2>Aviator!!</h2></div>
-        <nav>
+  </div>
 
-            <div class="balance">
-                <p id="balance-value" style="color: green; font-weight: bold;">1444.00</p><p> ZAR</p>
-            </div>
-            <div class="manu"></div>
-        </nav>
-       
-    </header>
-    <main>
-        <div class="history"></div>
-        <div class="containerAnime" id="verticalAnimation">
-            <div class="a"style="display:grid; justify-content:center;gap:50px;overflow:hidden;">
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                <div class="dots" style="width: 7px; background-color: aqua; height: 7px; border-radius: 100%;"></div>
-                </div>
-            <div class="avi-container">
-                
-
-            <div class="avi-jet" id="jet">
-            <img style="width: 100%; height: 100%;" src="/large-modern-passenger-airliner-jet.png" alt="">
-                </div>
-                <div class="zone">
-                    <p id="zone-value" style="text-align: center;">
-                        
-                    </p>
-                
-                </div>
-                <div class="avi-background">
-                
-                
-                </div>
-            
-            </div>
-            <div class="bottomdotss" style="height: 30px; width: 100%;background-color: rgb(11, 12, 12);z-index: 100;"></div>
-            <div class="bottomdots" style="display: inline-flex;height: 10px;width: 150vw; align-items: center; column-gap: 10vw; overflow: hidden;">
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-                <div class="bottom-dots" style="width: 7px; background-color: white; height: 7px; border-radius: 100%;"></div>
-
-
-            </div>
-
-    </div>
-        <div id="sec">
-            <section class="section">
-                <input type="checkbox" id="check1" class="check">
-                <div class="bet-option">
-                    <div class="m-bet">
-                        <label for="check1" class="manual-bet">Bet</label>
-                    </div>
-                    <div class="auto">
-                        <label for="check1" id="auto">Auto</label>
-                    </div>
-                </div>
-
-            <div class="first bet">
-                <div class="bet-amount">
-                    <input type="number" min="1" value="1.00" id="bet-amount-1">
-                    <div class="btn-amount">
-                        <button onclick="addAmout(10)">10</button>
-                        <button onclick="addAmout(20)">20</button>
-                        <button onclick="addAmout(50)">50</button>
-                        <button onclick="addAmout(100)">100</button>
-                </div>
-                </div>
-                <button id="btn-bet1" class="bet-button">BET</button>
-            </div>
-            
-            <div class="autoAll">
-                <div class="autoB">
-                    <input type="checkbox" id="autoBet">
-                    <label class="lbl-auto" for="autoBet">Auto Bet
-                        <div class="toggleAuto" for="autoBet">
-                            <div class="dot"></div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="autoC">
-                    <input type="checkbox" id="autoCashout">
-                    <label class="lbl-cashout" for="autoCashout">Auto Cash Out
-                        <div class="toggleCash" >
-                            <div class="dotCash"></div>
-                        </div>
-                    </label><input type="number" style="width: 35%;" id="cZone" value="1.5">
-                </div>
-            </div>
-        </section>
-        <section class="section1">
-            <input type="checkbox" id="check2" class="check">
-                <div class="bet-option">
-                    <div class="m-bet">
-                        <label for="check2" class="manual-bet">Bet</label>
-                    </div>
-                    <div class="auto">
-                        <label for="check2" id="auto">Auto</label>
-                    </div>
-                </div>
-            
-            <div class="second bet">
-                <div class="bet-amount">
-                    <input type="number" min="1" value="1.00" id="bet-amount-2">
-                <div class="btn-amount">
-                        <button onclick="addAmout2(10)">10</button>
-                        <button onclick="addAmout2(20)">20</button>
-                        <button onclick="addAmout2(50)">50</button>
-                        <button onclick="addAmout2(100)">100</button>
-                </div>
-                    
-                </div>
-                <button class="bet-button" id="btn2">BET</button>
-            </div>
-            
-            <div class="autoAll2">
-                <div class="autoB">
-                    <input type="checkbox" id="autoBet2">
-                    <label class="lbl-auto2" for="autoBet2">Auto Bet
-                        <div class="toggleAuto2" for="autoBet">
-                            <div class="dot2"></div>
-                        </div>
-                    </label>
-                </div>
-
-                <div class="autoC">
-                    <input type="checkbox" id="autoCashout2">
-                    <label class="lbl-cashout2" for="autoCashout2">Auto Cash Out
-                        <div class="toggleCash2" >
-                            <div class="dotCash2"></div>
-                        </div>
-                    </label>
-                </label><input type="number" min="1.1" value="1.50"style="width: 35%;" id="cZone2">
-
-                </div>
-            </div>
-        </section>
-    </div>
-    </main>
-    <footer>
-        <button class="ad">Play Sound<audio src="/audio.MP3"></audio></button>
-    </footer>
-   
-
+  <!-- Page content continues... -->
+  
 </body>
 </html>
-
