@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Xikungulu Dental Palace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Roboto', sans-serif;
+      overflow-x: hidden;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
+    header {
+      background: #0077b6;
+      color: #fff;
+      padding: 20px;
+      text-align: center;
+      animation: fadeIn 2s;
+    }
+    header h1 {
+      font-size: 2em;
+    }
+    header p {
+      font-style: italic;
+    }
+    section {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .subHeader{
+      display: grid;
+      height: 39vh;
+      grid-template-columns: 40vw auto;
+      background-image: url('dtnl.jpg');
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      animation: fadeIn 2s;
+      padding: 0px 20px;
+    } 
+    .wrking-days{
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .opn{
+      background-color: rgb(37, 9, 41);
+      width: 100%;
+      border-radius: 25px;
+      color: white;
+      padding: 8px;
+      text-align: center;
+    }
+    .hrs-container{
+      border-radius: 100%;
+      text-align: center;
+      height: 30vh;
+      width: 30vh;
+      color: white;
+      padding: 8px;
+      background-color: rgb(32, 9, 34);
+    }
+    .side{
+      display: flex;
+      align-items: flex-end;
+      justify-content:flex-end;
+    }
+    .slogan{
+      padding: 3px 3vw;
+      color: rgb(32, 85, 39);
+      text-decoration: underline;
+      font-style: italic;
+    }
+    .float-w-app{
+      position: fixed ;
+      background-color: rgb(29, 185, 94);
+      height:12vw;
+      width: 35vw;
+      top: 85vh;
+      right: 2vw;
+      border-radius: 25px;
+      display: inline-flex;
+      text-align: center;
+      color: white;
+      align-items: center;
+    }
+    .float-w-app:hover{
+      transition: 2s;
+      cursor: pointer;
+      border: white 3px solid;
+      box-shadow: 2px 3px 3px green;
+    }
+    .w-app{
+      background-image: url('wts.jpg');
+      height: 100%;
+      width: 40%;
+      border-radius: 50px;
+      
+    }
+    .services {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+      margin-top: 20px;
+    }
+    .service {
+      background: white;
+      padding: 15px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease;
+    }
+    .service:hover {
+      transform: scale(1.05);
+    }
+    .map-container{
+      height: 30vh;
+      background-color: #005f87;
+      display: grid;
+      padding: 5px;
+      align-items: last baseline;
+    }
+    form {
+      margin-top: 30px;
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+    button {
+      background: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #005f87;
+    }
+    footer {
+      display: grid;
+      background: #343a40;
+      color: white;
+      text-align: center;
+      padding: 10px;
+      justify-content: center;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    .social-links{
+      display: grid;
+      grid-template-columns: auto auto auto;
+      justify-content: space-between;
+      width: 180px;
+      padding: 9px;
+      justify-self: center;
+
+    }
+    .wa{
+      background-image: url('./whatsapp.jpg');
+    }
+    .fb{
+      background-image: url('./fb.jpg');
+    }
+    .x{
+      background-image: url('./x.jpg');
+    }
+    .social:hover{
+      background-size: 109%;
+    }
+    
+    .social{
+      height: 40px;
+      width: 40px;
+      border-radius: 50px;
+      background-color: white;
+      border: 2px wheat solid;
+
+    }
+    .locate-btn{
+      background-color: green;
+      height: fit-content;
+      width: fit-content;
+      justify-self: center;
+      align-self: flex-end;
+      bottom: 10vh;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Xikungulu Dental Palace & Associates</h1>
+  </header>
+  <div class="subHeader">
+    <div class="wrking-days">
+      <div class="opn">
+        <h3 class="">WE ARE OPEN</h3>
+      </div>
+      <div class="hrs-container">
+        <p>MON - FRI</p>
+        <p>09:00 - 17:00</p>
+        <p>SATURDAY</p>
+        <P>08:00 - 13:00</P>
+        <p>SUNDAY</p>
+        <p>EMERGENCY</p>
+      </div>
+    </div>
+    <div class="side">
+      <div class="motto">
+        <h3 class="slogan">Smile with confidence</h3>
+      </div>
+    </div>
+  </div>
+  <section>
+    <a href="#">
+     <div class="float-w-app">
+      <div class="w-app">
+         
+      </div>
+      <strong> WhatsApp</strong>
+    </div></a>
+   
+    <h2>About Us</h2>
+    <div class="about">
+      <p>   Welcome to Xikungulu Dental Palace & Associates, your go-to destination
+        for all your dental needs. Located in
+         a vibrant atmosphere, our dental clinic combines professional
+          and exceptional dental service. Our dedicated
+          team is here to assist you with a variety of services
+          tailored to meet your specific requirements. From
+           high-quality Slimming Wires, Gold/Silve/Platinum insertion,Teeth Removal, Filling, 
+           Fibre Bridge and <a href="#cleaning">More Dental Services</a>.
+           We ensure a seamless experience that leaves you
+            satisfied. Step into Xikungulu Dental Palace and explore the universe
+            of possibilities we offer.</p>
+    </div>
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service" id="cleaning">
+        <h3>Dental Cleaning</h3>
+        <p>Professional cleaning to keep your teeth fresh and healthy.</p>
+        <strong>Price:</strong> R400
+      </div>
+      <div class="service">
+        <h3>Tooth Extraction</h3>
+        <p>Safe removal of damaged or decayed teeth.</p>
+        <strong>Price:</strong> R400
+      </div>
+      <div class="service"  >
+        <h3>Teeth Whitening</h3>
+        <p>Brighten your smile with our safe whitening procedure.</p>
+        <strong>Price:</strong> R1800
+      </div>
+      <div class="service">
+        <h3>Dental Check-up</h3>
+        <p>Routine examination and consultation.</p>
+        <strong>Price:</strong> R300
+      </div>
+      <div class="service">
+        <h3>Fillings</h3>
+        <p>Restoration of decayed teeth with tooth-colored fillings.</p>
+        <strong>Price:</strong> R400
+      </div>
+      <div class="service">
+        <h3>GOLD/SILVER/PLATINUM</h3>
+        <p>Covering teeth with Gold/Silver/Platinum with descount
+           when you do more than one tooth, discount increases with the 
+           number of teeth.
+        </p>
+        <strong>Price:</strong> R400
+      </div><div class="service">
+        <h3>EXTRACTION </h3>
+        <p>Removal damaged Front or Wisdom tooth.</p>
+        <strong>Price:</strong> R400/ R500
+      </div><div class="service">
+        <h3>FIBRE BRIDGE</h3>
+        <p>Replacement for an Extracted/Removed tooth to Restore the Smile.</p>
+        <strong>Price:</strong> R1500
+      </div><div class="service">
+        <h3>Fillings</h3>
+        <p>Restoration of decayed teeth with tooth-colored fillings.</p>
+        <strong>Price:</strong> R500
+      </div>
+    </div>
+
+    <strong>Locate Us with Google Maps</strong>
+    <div class="map-container">
+      <button class="locate-btn" onclick="locate()">Locate</button>
+    </div>    
+    <form>
+      <h2>Contact Us</h2>
+      <input type="text" placeholder="Your Name" required />
+      <input type="email" placeholder="Your Email" required />
+      <textarea rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <table>
+      <tr>
+        <td><strong>CALL/WHATSAPP </strong></td>
+        <td>: 072 208 2108/069 257 2931</td>
+      </tr>
+      <tr>
+        <td><strong>ADDRESS </strong></td>
+        <td>: 260 Luvuyo cnr Luthando Str, Mapleton Ext 10
+          Bocksburg 1459
+        </td>
+      </tr>
+    </table>
+  
+  </section>
+
+  <footer>
+    <div class="social-links">
+      <a href="">
+        <div class="wa social" ></div>
+      </a>
+      <a href="">
+        <div class="fb social" ></div>
+      </a>
+      <a href="">
+        <div class="x social" ></div>
+      </a>
+  </div>
+    &copy; 2025 Xikungulu Dental Palace and Associates. All rights reserved.
+  </footer>
+</body>
+</html>
