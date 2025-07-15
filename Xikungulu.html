@@ -4,17 +4,54 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xikungulu Dental Palace</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
     (function(){
-      emailjs.init("TQCtxdGiQCO_JQgjp");
+      emailjs.init("TQCtxdGiQCO_JQgjp"); // Your EmailJS public key
     })();
   </script>
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+      padding: 20px;
+    }
+    form {
+      max-width: 500px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    button {
+      background-color: #0077b6;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #005f87;
+    }
+  </style>
 </head>
 <body>
+  <h2>Contact Us</h2>
   <form id="contact-form">
-    <input type="text" name="user_name" placeholder="Your Name" required />
-    <input type="email" name="user_email" placeholder="Your Email" required />
+    <input type="text" name="from_name" placeholder="Your Name" required />
+    <input type="email" name="reply_to" placeholder="Your Email" required />
     <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
     <button type="submit">Send Message</button>
   </form>
@@ -22,7 +59,7 @@
     const form = document.getElementById('contact-form');
     form.addEventListener('submit', function(e) {
       e.preventDefault();
-      emailjs.sendForm('service_uiw41jt', 'contact_form', this)
+      emailjs.sendForm('service_uiw41jt', 'template_xikungulu', this)
         .then(function(response) {
           alert('Message sent successfully!');
           form.reset();
