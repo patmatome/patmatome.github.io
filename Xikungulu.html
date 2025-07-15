@@ -4,89 +4,33 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Xikungulu Dental Palace</title>
-  <link href="https:                                                                                      
-  <style>
-                         
-  </style>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
-  <script type="text/javascript">
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
     (function(){
-      emailjs.init({
-        publicKey: "TQCtxdGiQCO_JQgjp",
-      });
+      emailjs.init("TQCtxdGiQCO_JQgjp");
     })();
   </script>
 </head>
 <body>
-  <header>
-    <h1>Xikungulu Dental Palace & Associates</h1>
-  </header>
-  <div class="subHeader">
-    <div class="wrking-days">
-      <div class="opn">
-        <h3 class="">WE ARE OPEN</h3>
-      </div>
-      <div class="hrs-container">
-        <p>MON - FRI</p>
-        <p>09:00 - 17:00</p>
-        <p>SATURDAY</p>
-        <P>08:00 - 13:00</P>
-        <p>SUNDAY</p>
-        <p>EMERGENCY</p>
-      </div>
-    </div>
-    <div class="side">
-      <div class="motto">
-        <h3 class="slogan">Smile with confidence</h3>
-      </div>
-    </div>
-  </div>
-  <section>
-    <a href="https:                                                                  
-      <div class="float-w-app">
-        <div class="w-app"> </div>
-        <strong> WhatsApp</strong>
-      </div></a>
-    <h2>About Us</h2>
-    <div class="about">
-      <p> Welcome to Xikungulu Dental Palace & Associates, your go-to destination for all your dental needs. Located in a vibrant atmosphere, our dental clinic combines professional and exceptional dental service. Our dedicated team is here to assist you with a variety of services tailored to meet your specific requirements. From high-quality Slimming Wires, Gold/Silve/Platinum insertion,Teeth Removal, Filling, Fibre Bridge and <a href="#cleaning">More Dental Services</a>. We ensure a seamless experience that leaves you satisfied. Step into Xikungulu Dental Palace and explore the universe of possibilities we offer.</p>
-    </div>
-    <h2>Our Services</h2>
-    <div class="services">
-      <!-- existing services -->
-    </div>
-    <strong>Locate Us with Google Maps</strong>
-    <div class="map-container">
-      <button class="locate-btn" onclick="locate()">Locate</button>
-    </div>
-    <form id="contact-form">
-      <h2>Contact Us</h2>
-      <input type="text" id="name" placeholder="Your Name" required />
-      <input type="email" id="email" placeholder="Your Email" required />
-      <textarea rows="5" id="message" placeholder="Your Message" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-    <table>
-      <tr>
-        <td><strong>CALL/WHATSAPP </strong></td>
-        <td>: 072 208 2108/069 257 2931</td>
-      </tr>
-      <tr>
-        <td><strong>ADDRESS </strong></td>
-        <td>: 260 Luvuyo cnr Luthando Str, Mapleton Ext 10 Bocksburg 1459 </td>
-      </tr>
-    </table>
-  </section>
-  <footer>
-    <div class="social-links">
-      <a href="https:                                                                 
-        <div class="wa social" ></div>
-      </a>
-      <a href="">
-        <div class="fb social" ></div>
-      </a>
-      <a href="">
-        <div class="x social" ></div>
-      </a>
-    </div>
-    &copy; 2025 Xikungulu Dental Palace and Associates. All rights reserved
+  <form id="contact-form">
+    <input type="text" name="user_name" placeholder="Your Name" required />
+    <input type="email" name="user_email" placeholder="Your Email" required />
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
+  <script>
+    const form = document.getElementById('contact-form');
+    form.addEventListener('submit', function(e) {
+      e.preventDefault();
+      emailjs.sendForm('service_uiw41jt', 'contact_form', this)
+        .then(function(response) {
+          alert('Message sent successfully!');
+          form.reset();
+        }, function(error) {
+          alert('Failed to send message. Please try again.');
+          console.error(error);
+        });
+    });
+  </script>
+</body>
+</html>
