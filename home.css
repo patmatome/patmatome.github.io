@@ -339,4 +339,7 @@ footer {
     max-width: 100%;
   }
 }
+header{
+  display:inline-flex;
+}
 
