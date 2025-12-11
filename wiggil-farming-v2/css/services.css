@@ -1,0 +1,41 @@
+.cnt-p{
+    text-align: center;
+}
+.services-container{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns:  40vw 40vw;
+    grid-template-rows: 50vh 30vh;
+    row-gap: 70px;
+    justify-content: space-between;
+    padding: 5vw;
+
+
+}
+.service{
+    display: grid;
+    justify-content:center;
+    align-items: center;
+}
+.serv-img{
+    height: 38vh;
+    width: 35vw;
+    align-items: center;
+    
+}
+.serv-title{
+    text-align: center;
+    text-decoration: underline;
+}
+@media screen and (max-width:500px) {
+    .services-container{
+    padding: 0px;
+    grid-template-columns:  95vw;
+    grid-template-rows: 50vh 30vh;
+}
+.serv-img{
+    height: 38vh;
+    width: 88vw;
+}
+}

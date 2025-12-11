@@ -1,0 +1,111 @@
+
+body { font-family: Arial, sans-serif;
+    overflow-x: hidden;
+}
+.carousel-item img { height: 85vh; 
+    object-fit: cover; 
+}
+footer form input, footer form textarea {
+     max-width: 500px; 
+    }
+td{
+    text-align: left;
+}
+.footer{
+    display: grid;
+    grid-template-columns: auto auto;
+    margin-bottom: 0px;
+}
+a:hover{
+    cursor: pointer;
+}
+.top-container{
+    display: grid;
+    grid-template-columns: 40vw 40vw;
+    gap: 50px;
+    justify-content: center;
+    
+}
+.director{
+    display: grid;
+    justify-content: center;
+    min-width: fit-content;
+    min-height: fit-content;
+    text-align: center;
+    margin-top: 51px;
+    padding: 19px 5px ;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 18px;
+}
+
+.contact-img{
+    width: 30vw;
+    height: 20vw;
+    background-color: gray;
+    
+}
+
+.emps-container{
+    display: grid;
+    grid-template-columns: 30vw 30vw 30vw;
+    gap: 30px;
+    justify-content: center;
+    align-items: center;
+    
+}
+.emps-img{
+    width: 25vw;
+    height: 15vw;
+    background-color: gray;
+}
+.director:hover{
+    box-shadow: 2px 2px 8px 2px gray;
+}
+
+.wa{
+    background-image: url('../assets/img/whatsapp.jpg');
+    
+}
+.fb{
+    background-image: url('../assets/img/fb.jpg');
+    
+}
+.x{
+    background-image: url('../assets/img/lnk.jpg');
+    
+}
+.lnk{
+    background-image: url('../assets/img/ins.jpg');
+    
+}
+@media screen and (max-width:600px) {
+    
+.emps-container{
+    display: grid;
+    grid-template-columns: 99vw;
+    grid-template-rows: 25vw 25vw 25vw 25vw 25vw 25vw;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+}
+.director{
+    display: grid;
+    grid-template-columns: 23vw 74vw;
+    margin-top: auto;
+    align-items: center;
+}
+.emps-img, .contact-img{
+    width:20vw;
+    height: 20vw;
+    background-color: gray;
+    border-radius: 50%;
+    
+}
+.top-container{
+    grid-template-columns: auto;
+    gap: 5px;
+    margin-bottom: 15px;
+}
+}

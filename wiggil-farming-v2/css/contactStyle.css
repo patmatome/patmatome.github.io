@@ -1,0 +1,143 @@
+*{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-size: 16px;
+}
+.contactsNav{
+    height: 45vh;
+    background-color: line;
+    width:100%;
+    background-image: url('../assets/img/logo.png');
+    background-color: rgb(32, 112, 216);
+}
+a:hover{
+    color: #2ecc71;
+   cursor: pointer;
+}
+.call-btn, .cntct-btn{
+    position: relative;
+    top: 50%;
+    color: white;
+    left: 5%;
+    width: 151px;
+    height: 35px;
+    margin-left: 21px;
+    border: 2px solid white;
+    border-radius: 5px;
+    background-color: #2ecc7004;
+    font-weight: bold;
+    cursor: pointer;
+    
+}
+ .cntct-btn {
+    color: rgb(0, 102, 255);
+    background-color: white;
+    border: 2px solid rgb(0, 102, 255);
+ }
+ .cntct-btn:hover{
+box-shadow: 1px 1px 8px 1px white;
+ }
+ .cform{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    height: max-content;
+ }
+ 
+ .u-name,.u-mail, textarea{
+    width:311px;
+    margin-top:25px ;
+    resize: none;
+    border-top: 0px;
+    border-left: 0pc;
+    border-right: 0px;
+ }
+ .u-name,.u-mail{
+    height: 100%;
+ }
+ .send{
+    width: 141px;
+    height: 35px;
+    margin-top: 21px;
+    border: 2px solid saddlebrown;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    background-color: #2ecc71;
+    justify-self: center;
+    color: white;
+
+ }
+ .send:hover{
+    box-shadow: 1px 1px 8px inset rgb(70, 52, 40);
+   text-shadow: 1px 1px 8cap inset rgb(70, 52, 40);
+ }
+ hr{
+    position: relative;
+    width: 231px;
+    bottom: 11px;
+    border: 2px solid sienna
+ }
+ h2{
+    display: grid;
+    justify-content: center;
+    text-align: center;
+    margin: 19px;
+ }
+ .lc{
+   display: grid;
+   align-items: center;
+   text-align: center;
+   justify-content: center;
+   grid-template-columns: auto 60px;
+ }
+ .loc-img{
+   width: 30px;
+   height: 30px;
+   background-image: url('../assets/img/locat.png');
+ }
+ .map-container{
+   display: grid;
+   justify-content: center;
+   width: inherit;
+ }
+ .map{
+   height: 35vh;
+   width: 100vw;
+ }
+.socials{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 21px;
+}
+ .icon{
+    width: 41px;
+    height: 41px;
+    margin-top: 11px;
+    margin-bottom: 11px;
+    border-radius: 5px;
+    background-size: cover;
+ }
+ footer{
+    border-top: 3px solid #2ecc71;
+    background-color:rgb(54, 43, 35);
+    color: white;
+ }
+ td{
+   padding: 5px;
+ }
+ footer>p{
+   text-align: center;
+   padding: 9px;
+ }
+ /*
+ @media screen and (max-width:600px) { 
+.map{
+   height: 30vh;
+   background-image: url('../assets/img/map.png');
+   background-size: cover;
+   align-self: center;
+ }
+ }

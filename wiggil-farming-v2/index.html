@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Wiggil Farming | Home</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-success">
+    <div class="container">
+      <a class="navbar-brand fw-bold" href="index.html">Wiggil Farming
+        <img src="assets/img/logo3.png" alt="kudu-logo" style="width: 70px;">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Carousel -->
+  <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="assets/img/lmp.png" class="d-block w-100" alt="Wiggil Potatoes" />
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h1>Fresh from Limpopo</h1>
+          <p>Quality potatoes and produce from Vivo, South Africa</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/modern.png" class="d-block w-100" alt="Helicopter spraying farm" />
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h1 >Modern Farming</h1>
+          <p>Using advanced techniques for higher yields</p>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="assets/img/plowing.jpg" class="d-block w-100" alt="Tractor working field" />
+        <div class="carousel-caption bg-dark bg-opacity-50 rounded">
+          <h1>Quality You Can Trust</h1>
+          <p>Supplying markets with excellence and care</p>
+        </div>
+      </div>
+      
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon"></span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon"></span>
+    </button>
+  </div>
+
+  <!-- Intro Section -->
+  <section class="py-5 text-center">
+    <div class="container">
+      <h2 id="user-name">Welcome to Wiggil Farming</h2>
+      <p>Located in the fertile lands of Limpopo between Vivo and Aldays, we take pride in 
+        growing high-quality products using modern and sustainable farming 
+        practices. The Wiggill family has come a long way
+         with farming, Cliffed Wiggill and father Clive farm with Sorghum,
+         Corn, Grapes, Farm Game, Potatoes and butternuts which they supply
+          to two large chain stores. Keeping it in the family, Cliffed’s 
+          wife Theressa handles the farm’s finances.</p>
+    </div>
+  </section>
+  <section>
+    
+  </section>
+  <!-- Footer with Quick Contact -->
+  <footer class="bg-success text-white text-center py-4">
+    <div class="container">
+      <h2>Contact Us</h2>
+      <form id="quickForm" class="d-flex justify-content-center flex-column align-items-center">
+        <input type="text" placeholder="Your Name" class="form-control w-50 mb-2" required />
+        <textarea placeholder="Message" class="form-control w-50 mb-2" required></textarea>
+        <button class="btn btn-light">Send</button>
+      </form>
+
+      <!-- TODO: Add EmailJS quick form integration here -->
+      <!-- Example:
+      emailjs.init("YOUR_PUBLIC_KEY");
+      emailjs.send("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", { name, message });
+      -->
+    </div> 
+    <!-- 
+    -->
+   
+
+  </footer>
+  <script src="js/main.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

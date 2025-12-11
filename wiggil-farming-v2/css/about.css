@@ -1,0 +1,151 @@
+*{
+    background-position: center;
+    background-size: cover;
+
+}
+.top{
+    background: linear-gradient(rgb(9, 88, 9), saddlebrown, white);
+    padding: 18px;
+}
+.abt-pad{
+    text-align: center;
+}
+.par-co{
+    display: inline;
+
+}
+.bld-p{
+    font-weight: bold;
+}
+.top-kudu{
+    display: grid;
+    height: 75vh;
+    width: 100%;
+    align-self: center;
+    justify-self: center;
+    background-image: url('../assets/img/Reblex_Agco_wiggill-4-1536x862.jpg');
+    align-items:end;
+    color: white;
+}
+.ranch-countainer{
+    display: grid;
+    grid-template-columns: 30vw 68vw;
+    justify-content: space-between;
+    margin-top: 10px;
+    margin-left: 5px;
+}
+.k-txt {
+    height: 30vw;
+    background-image: url('../assets/img/kp.jpg');
+}
+.topic {
+    margin-right: 10px;
+}
+h3,h1{
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+.grid-4-2{
+    display: grid;
+    grid-template-columns: 30vw 60vw;
+    justify-content: center;
+    border: 1px gray solid;
+    width:90vw;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 5px;
+    justify-self: center;
+    box-shadow: 1px 1px 8px saddlebrown;
+    background-color: rgba(192, 192, 192, 0.192);
+    background:linear-gradient(rgba(0, 128, 0, 0.37),rgba(255, 0, 0, 0.123))
+
+}
+.grid-4-3{
+    display: grid;
+    grid-template-columns: 60vw 30vw;
+    justify-content: center;
+    border: 1px gray solid;
+    width: 90vw;
+    border-radius: 15px;
+    margin-top: 50px;
+    padding: 5px;
+    justify-self: center;
+    box-shadow: 1px 1px 8px saddlebrown;
+    background:linear-gradient(rgba(0, 128, 0, 0.37),rgba(255, 0, 0, 0.123))
+}
+.grid-lft{
+    border-left: 2px green solid;
+    border-radius: 15px;
+    align-items: center;
+}
+.grid-rgt{
+    border-right: 2px green solid;
+    border-radius: 15px;
+    align-items: center;
+}
+.hlogo{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.with{
+    align-self: center;
+    background-image: url('../assets/img/logo3.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+li{
+    
+}
+@media screen and (max-width:1300px) {
+    
+.k-txt {
+    height: 0px;
+    visibility: collapse;
+} 
+.ranch-countainer{
+    display: grid;
+    grid-template-columns: auto;
+    padding-top: 0px;
+    height: min-content;
+}
+}
+@media screen and (max-width:600px) {
+    .grid-4-3{
+        width: 99%;
+    }
+    .grid-4-2{
+        width: 99%;
+    }
+}
+@media screen and (max-width:540px) {
+    .grid-4-3{
+        grid-template-columns: auto;
+        width: 99%;
+        order: 2;
+    }
+    .grid-4-2{
+        grid-template-columns: auto;
+        width: 99%;
+    }
+.box-2{
+    order: 2;
+}
+.box-1{
+    order: 1;
+}
+.grid-lft{
+    background-color: rgba(160, 81, 45, 0.356);
+    border-right: 2px green solid;
+    border-radius: 50px;
+}
+.grid-rgt{
+    background-color: rgba(160, 81, 45, 0.356);
+    border-left: 2px green solid;
+    border-radius: 50px;
+}
+
+}
