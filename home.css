@@ -52,7 +52,6 @@ header#me {
 .navbar ul {
   display: grid;
   list-style: none;
-  gap: 2rem;
   grid-template-columns: auto 1fr;
 }
 
@@ -343,5 +342,6 @@ footer {
 header{
   display:inline-flex;
 }
+
 
 
