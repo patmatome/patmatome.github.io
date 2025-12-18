@@ -50,9 +50,10 @@ header#me {
 
 /* Navbar */
 .navbar ul {
-  display: flex;
+  display: grid;
   list-style: none;
   gap: 2rem;
+  grid-template-columns: auto 1fr;
 }
 
 .navbar ul li a {
@@ -342,4 +343,5 @@ footer {
 header{
   display:inline-flex;
 }
+
 
