@@ -50,14 +50,36 @@ header#me {
 
 /* Navbar */
 .navbar {
-    display: flex;
-    justify-content: space-between; /* Pushes the logo to one end and links to the other */
-    align-items: center; /* Vertically centers the logo and links */
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: auto-sized logo, rest for nav links */
+    align-items: center; /* Vertically centers items in the nav */
+    padding: 10px 20px;
     background-color: #333;
     color: white;
-    padding: 10px 20px;
-    height: 60px; /* Example height */
 }
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-links {
+    list-style: none; /* Removes bullet points */
+    display: grid;
+    /* 4 columns: one for each li item, auto size for each */
+    grid-template-columns: repeat(4, auto);
+    gap: 20px; /* Space between the links */
+    justify-content: flex-end; /* Aligns the links to the end (right) of the 1fr column */
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+}
+
 
 .navbar ul li a {
   padding: 0.5rem 1rem;
@@ -346,6 +368,7 @@ footer {
 header{
   display:inline-flex;
 }
+
 
 
 
