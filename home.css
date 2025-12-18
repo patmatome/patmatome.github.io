@@ -5,9 +5,11 @@
   box-sizing: border-box;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
-#check{
+
+#check {
   display: none;
 }
+
 body {
   background: linear-gradient(135deg, #3b3f5c, #6c7a89);
   color: #f0f0f5;
@@ -28,17 +30,20 @@ a:hover {
   color: #00fff7;
 }
 
-/* Header */
 header#me {
   background-color: #272b3a;
-  padding: 1rem 2rem;
   position: sticky;
   top: 0;
   z-index: 1000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
-  display: inline-flex;
+  display: block;
+}
+
+.navbar {
+  display: grid;
+  grid-template-columns: auto 1fr;
   align-items: center;
-  justify-content: space-between;
+  padding: 1rem 2rem;
 }
 
 .logo {
@@ -46,62 +51,38 @@ header#me {
   font-size: 1.7rem;
   color: #00bfa5;
   letter-spacing: 2px;
-}
-
-/* Navbar */
-.navbar {
-    display: grid;
-    grid-template-columns: 1fr auto; /* Two columns: auto-sized logo, rest for nav links */
-    align-items: center; /* Vertically centers items in the nav */
-    padding: 10px 20px;
-}
-
-.logo {
-    
-    font-size: 24px;
-    font-weight: bold;
-}
-.logo:hover {
   cursor: pointer;
 }
 
-
 .nav-links {
-    list-style: none; /* Removes bullet points */
-    display: grid;
-    /* 4 columns: one for each li item, auto size for each */
-    grid-template-columns: repeat(4, auto);
-    gap: 20px; /* Space between the links */
-    justify-content: flex-end; /* Aligns the links to the end (right) of the 1fr column */
-    margin: 0;
-    padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  gap: 20px;
+  justify-content: end;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links li a {
-    text-decoration: none;
-    color: white;
-    padding: 10px;
-}
-
-
-.navbar ul li a {
   padding: 0.5rem 1rem;
   border-radius: 6px;
   font-weight: 600;
   letter-spacing: 0.7px;
+  color: white;
   transition: background-color 0.3s ease;
 }
 
-.navbar ul li a.active,
-.navbar ul li a:hover {
+.nav-links li a.active,
+.nav-links li a:hover {
   background-color: #00bfa5;
   color: #272b3a;
 }
 
-/* Hamburger toggle styles */
 .toggle {
   display: none;
   cursor: pointer;
+  justify-self: end;
 }
 
 .line {
@@ -113,7 +94,6 @@ header#me {
   transition: 0.4s;
 }
 
-/* Profile Section */
 .profile-section {
   padding: 2rem 5%;
   text-align: center;
@@ -138,7 +118,6 @@ header#me {
   text-shadow: 0 2px 8px #008070aa;
 }
 
-/* Social Icons */
 .social-icons {
   margin: 1rem 0 2rem;
   display: flex;
@@ -158,7 +137,6 @@ header#me {
   filter: brightness(150%);
 }
 
-/* Home content */
 .home-content {
   max-width: 900px;
   margin: 0 auto 3rem;
@@ -204,7 +182,6 @@ header#me {
   color: #004d40;
 }
 
-/* About me section */
 .about-me {
   background: rgba(43, 50, 70, 0.8);
   max-width: 900px;
@@ -227,7 +204,6 @@ header#me {
   font-weight: 600;
 }
 
-/* Projects preview */
 .projects-preview {
   max-width: 900px;
   margin: 0 auto 3rem;
@@ -299,7 +275,6 @@ header#me {
   color: #00fff7;
 }
 
-/* Project description */
 .fx-description {
   flex: 1 1 350px;
   color: #b0d9d9;
@@ -308,7 +283,6 @@ header#me {
   padding: 1rem;
 }
 
-/* Footer */
 footer {
   background: #272b3a;
   color: #a5a5a5;
@@ -337,9 +311,12 @@ footer {
   filter: brightness(140%);
 }
 
-/* Responsive */
 @media (max-width: 768px) {
-  .navbar ul {
+  .navbar {
+    grid-template-columns: 1fr auto;
+  }
+
+  .nav-links {
     display: none;
   }
 
@@ -347,15 +324,16 @@ footer {
     display: block;
   }
 
-  #check:checked + .toggle + .navbar ul {
+  #check:checked ~ .navbar .nav-links {
     display: flex;
     flex-direction: column;
     background-color: #272b3a;
     position: absolute;
-    top: 60px;
+    top: 70px;
     right: 2rem;
     padding: 1rem;
     border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);
   }
 
   .project-fx {
@@ -368,13 +346,3 @@ footer {
     max-width: 100%;
   }
 }
-header{
-  display:inline-flex;
-}
-
-
-
-
-
-
-
