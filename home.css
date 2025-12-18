@@ -49,10 +49,14 @@ header#me {
 }
 
 /* Navbar */
-.navbar ul {
-  display: grid;
-  list-style: none;
-  grid-template-columns: auto 1fr;
+.navbar {
+    display: flex;
+    justify-content: space-between; /* Pushes the logo to one end and links to the other */
+    align-items: center; /* Vertically centers the logo and links */
+    background-color: #333;
+    color: white;
+    padding: 10px 20px;
+    height: 60px; /* Example height */
 }
 
 .navbar ul li a {
@@ -342,6 +346,7 @@ footer {
 header{
   display:inline-flex;
 }
+
 
 
 
