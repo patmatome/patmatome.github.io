@@ -51,15 +51,20 @@ header#me {
 /* Navbar */
 .navbar {
     display: grid;
-    grid-template-columns: auto 1fr; /* Two columns: auto-sized logo, rest for nav links */
+    grid-template-columns: 1fr auto; /* Two columns: auto-sized logo, rest for nav links */
     align-items: center; /* Vertically centers items in the nav */
     padding: 10px 20px;
 }
 
 .logo {
+    
     font-size: 24px;
     font-weight: bold;
 }
+.logo:hover {
+  cursor: pointer;
+}
+
 
 .nav-links {
     list-style: none; /* Removes bullet points */
@@ -366,6 +371,7 @@ footer {
 header{
   display:inline-flex;
 }
+
 
 
 
