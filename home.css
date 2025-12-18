@@ -54,8 +54,6 @@ header#me {
     grid-template-columns: auto 1fr; /* Two columns: auto-sized logo, rest for nav links */
     align-items: center; /* Vertically centers items in the nav */
     padding: 10px 20px;
-    background-color: #333;
-    color: white;
 }
 
 .logo {
@@ -368,6 +366,7 @@ footer {
 header{
   display:inline-flex;
 }
+
 
 
 
